@@ -45,7 +45,7 @@ Respect: Chirag
 We also decided upon Greenfoot and our starter game idea.
 
 ### Burndown Map
-GameSquad Sprint Task Sheet.xlsx
+https://drive.google.com/a/sjsu.edu/file/d/1wNGIhwOBojZlTlINEaS5ZTHJWJXxn2if/view?usp=sharing
 
 located in docs directory
 
