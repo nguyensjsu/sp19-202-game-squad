@@ -43,6 +43,7 @@ Respect: Chirag
 We also decided upon Greenfoot and our starter game idea.
 
 ### Burndown Map
+![Alt text](GameSquad Sprint Task Sheet.xlsx?raw=true "Burndown Chart")
 
 ### Project Dashboard
 
