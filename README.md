@@ -8,7 +8,9 @@
 
 # Team Project Repo 
 
-## Game Squad
+## Team
+
+Game Squad
 
 ## Team Members
 
