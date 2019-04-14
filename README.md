@@ -46,9 +46,9 @@ Respect: Chirag
 We also decided upon Greenfoot and our starter game idea.
 
 ### Burndown Map
-https://drive.google.com/a/sjsu.edu/file/d/1wNGIhwOBojZlTlINEaS5ZTHJWJXxn2if/view?usp=sharing
+https://drive.google.com/a/sjsu.edu/file/d/12t8RFfYVWcVf-NUMc_0Re2XPNqu7Egci/view?usp=sharing
 
 ### Project Dashboard
-https://drive.google.com/a/sjsu.edu/file/d/1wNGIhwOBojZlTlINEaS5ZTHJWJXxn2if/view?usp=sharing
+https://drive.google.com/a/sjsu.edu/file/d/12t8RFfYVWcVf-NUMc_0Re2XPNqu7Egci/view?usp=sharing
 
 ### Individual Contributions
