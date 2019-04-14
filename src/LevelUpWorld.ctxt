@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=LevelUpWorld
+comment1.params=director
+comment1.target=LevelUpWorld(DirectorState)
+comment2.params=
+comment2.target=void\ setEndGameState()
+comment3.params=
+comment3.target=void\ setPlayGameState()
+comment4.params=
+comment4.target=void\ setLevelUpState()
+comment5.params=
+comment5.target=void\ setInitState()
+comment6.params=
+comment6.target=void\ prepare()
+numComments=7

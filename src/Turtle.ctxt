@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Turtle
+comment0.text=\n\ @author\:\ Marianne\ Paulson\ based\ on\ watching\ this\ video\ series\:\ https\://blogs.kcl.ac.uk/proged/2012/01/14/joc-9/\n\ @version\:\ 1\n
+comment1.params=
+comment1.target=Turtle()
+comment2.params=pointCounter
+comment2.target=Turtle(Counter)
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=void\ checkKeys()
+comment4.text=\n\ Check\ keys\n
+comment5.params=
+comment5.target=void\ eat()
+comment5.text=\n\ Check\ if\ lettuce\ or\ bugs\ there\ and\ then\ eat\n
+comment6.params=
+comment6.target=void\ createNewBug()
+comment6.text=\n\ Create\ a\ new\ bug\n
+comment7.params=
+comment7.target=void\ gameOver()
+numComments=8
