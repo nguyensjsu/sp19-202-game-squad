@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Animal
+comment0.text=\n\ Animal.\ This\ is\ the\ base\ class\ for\ all\ animals.\ In\ addition\ to\ the\ standard\ Actor\n\ methods,\ it\ provides\ methods\ to\ eat\ other\ animals\ and\ check\ for\ the\ edge\ of\ the\ world.\n\ \n\ @author\:\ Marianne\ Paulson\ based\ on\ watching\ this\ video\ series\:\ https\://blogs.kcl.ac.uk/proged/2012/01/14/joc-9/\n\ @version\:\ 1\n
+comment1.params=
+comment1.target=boolean\ atWorldEdge()
+comment1.text=\n\ Test\ if\ we\ are\ close\ to\ one\ of\ the\ edges\ of\ the\ world.\ Return\ true\ if\ we\ are.\n
+comment2.params=clss
+comment2.target=boolean\ canSee(java.lang.Class)
+comment2.text=\n\ Return\ true\ if\ we\ can\ see\ an\ object\ of\ class\ 'clss'\ right\ where\ we\ are.\ \n\ False\ if\ there\ is\ no\ such\ object\ here.\n
+comment3.params=clss
+comment3.target=void\ eat(java.lang.Class)
+comment3.text=\n\ Try\ to\ eat\ an\ object\ of\ class\ 'clss'.\ This\ is\ only\ successful\ if\ there\n\ is\ such\ an\ object\ where\ we\ currently\ are.\ Otherwise\ this\ method\ does\n\ nothing.\n
+numComments=4

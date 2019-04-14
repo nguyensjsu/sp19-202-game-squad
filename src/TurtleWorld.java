@@ -1,28 +1,34 @@
 import greenfoot.*;  // imports Actor, World, Greenfoot, GreenfootImage
 
-public class TurtleWorld extends World
+public class TurtleWorld extends AbstractWorld
 {
-    /**
-     * Create the turtle world. Our world has a size 
-     * of 560x460 cells, where every cell is just 1 pixel.
-     */
-    public TurtleWorld() 
-    {
-        super(600, 480, 1);
-        prepare();
+    public TurtleWorld(DirectorState director) {
+        super(director);
     }
-
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
-    private void prepare()
+   
+    public void setEndGameState() {
+        this.director.setState(new EndWorld(director));
+    }
+    
+    public void setPlayGameState() {
+        this.director.setState(this);
+    }
+    
+    public void setLevelUpState() {
+        this.director.setState(new LevelUpWorld(director));
+    }
+    
+    public void setInitState() {
+        this.director.setState(new InitState(director));
+    }
+    
+    public void prepare()
     {
         Counter counter = new Counter();
         addObject(counter, 58, 26);
         Turtle turtle = new Turtle(counter);
         addObject(turtle,100,100);
-
+        /*
         Lettuce lettuce = new Lettuce();
         addObject(lettuce,395,135);
         Lettuce lettuce2 = new Lettuce();
@@ -149,5 +155,6 @@ public class TurtleWorld extends World
         addObject(bug,327,323);
         Snake snake34 = new Snake();
         addObject(snake34,486,71);
+        */
     }
 }
