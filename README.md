@@ -17,7 +17,7 @@ Game Squad
 * [Marianne Paulson](https://github.com/mariannepaulson/cmpe202)
 * [Saumil N Patel](https://github.com/xxx/cmpe202)
 * [Anjali Deshmukh](https://github.com/xxx/cmpe202)
-* [Megha](https://github.com/xxx/cmpe202)
+* [Megha Lnu](https://github.com/xxx/cmpe202)
 * [Chirag Arora](https://github.com/xxx/cmpe202)
 
 ## Project Name
@@ -26,12 +26,13 @@ Fun with turtles, snowmen, zombies, and much more
 
 ## Project Description
 
-We started with Trick the Turtle - a game one of us created based on watching Michael Kolling's video series.
+We started with a cute turtle game one of us created based on watching Michael Kolling's video series.
 
 https://blogs.kcl.ac.uk/proged/2012/01/14/joc-9/
 
-The initial commit of code is from watching how to create this game and creating it from scratch.
-We will then refactor the code by using patterns and expand upon the features.
+The initial commit of code is from watching how to create this game and creating it from scratch. We then added counter and custom sounds. 
+
+We will then refactor the code by using patterns and expand upon the features with user stories.
 
 ## Project Progress
 
@@ -47,8 +48,7 @@ We also decided upon Greenfoot and our starter game idea.
 ### Burndown Map
 https://drive.google.com/a/sjsu.edu/file/d/1wNGIhwOBojZlTlINEaS5ZTHJWJXxn2if/view?usp=sharing
 
-located in docs directory
-
 ### Project Dashboard
+https://drive.google.com/a/sjsu.edu/file/d/1wNGIhwOBojZlTlINEaS5ZTHJWJXxn2if/view?usp=sharing
 
 ### Individual Contributions
