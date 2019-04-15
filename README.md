@@ -39,9 +39,9 @@ We will then refactor the code by using patterns and expand upon the features wi
 The first week we divided up the XP values as follows:
 Megha: Simplicity
 Anjali: Communication
-Feedback: Saumil
-Courage: Marianne
-Respect: Chirag
+Saumil: Feedback
+Marianne: Courage
+Chirag: Respect
 
 We also decided upon Greenfoot and our starter game idea.
 
