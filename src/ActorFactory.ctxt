@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=ActorFactory
+comment1.params=type\ x\ y
+comment1.target=greenfoot.Actor\ createActor(java.lang.String,\ int,\ int)
+numComments=2

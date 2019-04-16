@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=Helper
+comment1.params=actor\ x\ y
+comment1.target=void\ createActor(greenfoot.Actor,\ int,\ int)
+numComments=2

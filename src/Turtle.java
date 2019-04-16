@@ -1,10 +1,49 @@
+
 import greenfoot.*; 
 /*
- * @author: Marianne Paulson based on watching this video series: https://blogs.kcl.ac.uk/proged/2012/01/14/joc-9/
- * @version: 1
+ * Turtle class, singleton
  */
 public class Turtle extends Animal
 {
+    private static Turtle turtle = new Turtle();
+    
+    private Turtle() {}
+    
+    public static Turtle getTurtle() {
+     return turtle;   
+    }
+    
+        public void act()
+    {
+        move(WorldConfig.TURTLE_SPEED);
+        checkKeys();
+        //eat();
+    }
+
+    public void checkKeys()
+    {
+        if (Greenfoot.isKeyDown("Left"))
+        {
+            turn(-WorldConfig.TURTLE_DEGREE);
+        }
+
+        if (Greenfoot.isKeyDown("Right"))
+        {
+            turn(WorldConfig.TURTLE_DEGREE);
+        }
+
+        if (Greenfoot.isKeyDown("Up"))
+        {
+            move(WorldConfig.TURTLE_SPEED);
+        }
+
+        if (Greenfoot.isKeyDown("Down"))
+        {
+            move(-WorldConfig.TURTLE_SPEED);
+        }
+    }
+    
+    /*
     private int points;
     private Counter counter;
 
@@ -18,42 +57,9 @@ public class Turtle extends Animal
         counter = pointCounter;
     }
 
-    public void act()
-    {
-        move(4);
-        checkKeys();
-        eat();
-    }
 
-    /**
-     * Check keys
-     */
-    public void checkKeys()
-    {
-        if (Greenfoot.isKeyDown("Left"))
-        {
-            turn(-5);
-        }
 
-        if (Greenfoot.isKeyDown("Right"))
-        {
-            turn(5);
-        }
-
-        if (Greenfoot.isKeyDown("Up"))
-        {
-            move(5);
-        }
-
-        if (Greenfoot.isKeyDown("Down"))
-        {
-            move(-5);
-        }
-    }
-
-    /**
-     * Check if lettuce or bugs there and then eat
-     */
+   
     public void eat()
     {
         if(canSee(Lettuce.class))
@@ -79,9 +85,6 @@ public class Turtle extends Animal
         }
     }
 
-    /**
-     * Create a new bug
-     */
     private void createNewBug()
     {
         Bug newBug;
@@ -105,4 +108,5 @@ public class Turtle extends Animal
         Greenfoot.playSound("fanfare.aiff");
         Greenfoot.stop();
     }
+    */
 }

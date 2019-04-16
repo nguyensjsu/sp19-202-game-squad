@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ActorGenerator
+comment1.params=type\ x\ y
+comment1.target=greenfoot.Actor\ createActor(java.lang.String,\ int,\ int)
+comment2.params=x\ y
+comment2.target=greenfoot.Actor\ createSnake(int,\ int)
+comment3.params=x\ y
+comment3.target=greenfoot.Actor\ createLettuce(int,\ int)
+comment4.params=x\ y
+comment4.target=greenfoot.Actor\ createRedLettuce(int,\ int)
+comment5.params=x\ y
+comment5.target=greenfoot.Actor\ createBug(int,\ int)
+numComments=6

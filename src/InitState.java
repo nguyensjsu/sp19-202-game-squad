@@ -19,13 +19,13 @@ public class InitState extends AbstractWorld
     }
     
     public void setInitState() {
-        this.director.setState(this);
+        
     }
     
     public void prepare() {
         Counter counter = new Counter();
         addObject(counter, 58, 26);
-        Turtle turtle = new Turtle(counter);
+        Turtle turtle = Turtle.getTurtle();
         addObject(turtle,100,100);
     }
 }
