@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Snake
-comment0.text=\n\ Snakes\n\ \n\ @author\:\ Marianne\ Paulson\ based\ on\ watching\ this\ video\ series\:\ https\://blogs.kcl.ac.uk/proged/2012/01/14/joc-9/\n\ @version\:\ 1\n
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\n\ Act\ -\ do\ whatever\ the\ Snake\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n

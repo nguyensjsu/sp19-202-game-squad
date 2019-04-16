@@ -2,6 +2,8 @@ import greenfoot.*;  // imports Actor, World, Greenfoot, GreenfootImage
 
 public class TurtleWorld extends AbstractWorld
 {
+    
+    ActorManager manager = new ActorManager();
     public TurtleWorld(DirectorState director) {
         super(director);
     }
@@ -21,13 +23,15 @@ public class TurtleWorld extends AbstractWorld
     public void setInitState() {
         this.director.setState(new InitState(director));
     }
+   
     
     public void prepare()
     {
         Counter counter = new Counter();
         addObject(counter, 58, 26);
-        Turtle turtle = new Turtle(counter);
+        Turtle turtle = Turtle.getTurtle();
         addObject(turtle,100,100);
+        manager.createLettuce();
         /*
         Lettuce lettuce = new Lettuce();
         addObject(lettuce,395,135);

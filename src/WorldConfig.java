@@ -9,6 +9,12 @@ public class WorldConfig
     private static int x =800;
     private static int y=800;
     private static int cellSize = 1;
+    public static int TURTLE_SPEED = 2;
+    public static int TURTLE_DEGREE = 2;
+    public static int NUM_OF_LETTUCE = 10;
+    public static int NUM_OF_RED_LETTUCE = 1;
+    public static int NUM_OF_SNAKES = 10;
+    public static int NUM_OF_BUGS = 1;
     
     public static int getX() {
         return x;
