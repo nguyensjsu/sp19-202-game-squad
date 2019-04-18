@@ -3,17 +3,18 @@ import greenfoot.*;
 /*
  * Turtle class, singleton
  */
-public class Turtle extends Animal
+public class Turtle extends Animal implements KeyListener
 {
     private static Turtle turtle = new Turtle();
-    
+    private PowerDecorator powerDecorator = null;
+
     private Turtle() {}
     
     public static Turtle getTurtle() {
      return turtle;   
     }
     
-        public void act()
+    public void act()
     {
         move(WorldConfig.TURTLE_SPEED);
         checkKeys();
@@ -24,25 +25,68 @@ public class Turtle extends Animal
     {
         if (Greenfoot.isKeyDown("Left"))
         {
-            turn(-WorldConfig.TURTLE_DEGREE);
+           keyLeftAction();
         }
 
         if (Greenfoot.isKeyDown("Right"))
         {
-            turn(WorldConfig.TURTLE_DEGREE);
+            keyRightAction();
         }
 
-        if (Greenfoot.isKeyDown("Up"))
+        if ("up".equals(Greenfoot.getKey()))
         {
-            move(WorldConfig.TURTLE_SPEED);
+            keyUpAction();
         }
 
         if (Greenfoot.isKeyDown("Down"))
         {
+           keyDownAction();
+        }
+    }
+
+    public void keyLeftAction() {
+        if (this.powerDecorator != null) {
+            this.powerDecorator.keyLeftAction();
+        } else {
+            turn(-WorldConfig.TURTLE_DEGREE);
+        }
+    }
+
+     public void keyRightAction() {
+          if (this.powerDecorator != null) {
+            this.powerDecorator.keyLeftAction();
+        } else {
+            turn(WorldConfig.TURTLE_DEGREE);
+        }
+    }
+
+     public void keyUpAction() {
+          if (this.powerDecorator != null) {
+            this.powerDecorator.keyLeftAction();
+        } else {
+            Shot shot = new Shot();
+            getWorld().addObject(shot, getX(), getY());
+            shot.setRotation(getRotation());
+            shot.move(55);
+            move(WorldConfig.TURTLE_SPEED);
+        }
+    }
+
+     public void keyDownAction() {
+          if (this.powerDecorator != null) {
+            this.powerDecorator.keyLeftAction();
+        } else {
             move(-WorldConfig.TURTLE_SPEED);
         }
     }
     
+    public void setDecorator(PowerDecorator powerDecorator) {
+        this.powerDecorator = powerDecorator;
+    }
+
+    public void removeDecorator() {
+        this.powerDecorator = null;
+    }
     /*
     private int points;
     private Counter counter;

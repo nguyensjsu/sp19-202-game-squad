@@ -7,7 +7,7 @@ import greenfoot.*;
  * @author: Marianne Paulson based on watching this video series: https://blogs.kcl.ac.uk/proged/2012/01/14/joc-9/
  * @version: 1
  */
-public class Animal extends Actor
+public class Animal extends Actor implements KeyListener
 {
     /**
      * Test if we are close to one of the edges of the world. Return true if we are.
@@ -45,5 +45,21 @@ public class Animal extends Actor
         if(actor != null) {
             getWorld().removeObject(actor);
         }
+    }
+
+    public void keyLeftAction() {
+        // do nothing
+    }
+
+     public void keyRightAction() {
+          // do nothing
+    }
+
+     public void keyUpAction() {
+        // do nothing
+    }
+
+     public void keyDownAction() {
+        // do nothing
     }
 }
