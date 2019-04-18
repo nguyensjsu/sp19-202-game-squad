@@ -5,4 +5,3 @@ public interface KeyListener
     void keyUpAction();
     void keyDownAction();
 }
-
