@@ -30,6 +30,7 @@ public class ActorManager {
         int worldHeight = world.getHeight();
         
         int remaining = WorldConfig.NUM_OF_LETTUCE - existing;
+        factory.createActor(RedLettuce.class.getName(),  Greenfoot.getRandomNumber(worldWidth), Greenfoot.getRandomNumber(worldHeight));
         int i = 0;
         while(0<remaining) {
             int x = Greenfoot.getRandomNumber(worldWidth);
