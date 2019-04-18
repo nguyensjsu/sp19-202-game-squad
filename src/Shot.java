@@ -20,8 +20,8 @@ public class Shot extends Actor
     public void act()
     {
         move(25);
-        if (canSee(RedLettuce.class)) {
-             Actor actor = getOneObjectAtOffset(0, 0, RedLettuce.class);
+        if (canSee(Snake.class)) {
+             Actor actor = getOneObjectAtOffset(0, 0, Snake.class);
              if(actor != null) {
                  getWorld().removeObject(actor);
                  getWorld().removeObject(this);
