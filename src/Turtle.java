@@ -1,14 +1,17 @@
-
+import java.util.ArrayList;
 import greenfoot.*; 
 /*
  * Turtle class, singleton
  */
-public class Turtle extends Animal implements KeyListener
+public class Turtle extends Animal implements KeyListener, IEatSubject
 {
     private static Turtle turtle = new Turtle();
     private PowerDecorator powerDecorator = null;
+    ArrayList<IEatObserver> observers;
 
-    private Turtle() {}
+    private Turtle() {
+        observers = new ArrayList<IEatObserver>();
+    }
     
     public static Turtle getTurtle() {
      return turtle;   
@@ -63,13 +66,7 @@ public class Turtle extends Animal implements KeyListener
      public void keyUpAction() {
           if (this.powerDecorator != null) {
             this.powerDecorator.keyLeftAction();
-        } else {
-            Shot shot = new Shot();
-            getWorld().addObject(shot, getX(), getY());
-            shot.setRotation(getRotation());
-            shot.move(55);
-            move(WorldConfig.TURTLE_SPEED);
-        }
+          } 
     }
 
      public void keyDownAction() {
@@ -86,6 +83,32 @@ public class Turtle extends Animal implements KeyListener
 
     public void removeDecorator() {
         this.powerDecorator = null;
+    }
+    
+    public void eat(Class clss)
+    {
+        Actor actor = getOneObjectAtOffset(0, 0, clss);
+        if(actor != null) {
+            getWorld().removeObject(actor);
+        }
+    }
+    
+    public void attach (IEatObserver obj) {
+        observers.add(obj);
+    }
+    
+    public void removeObserver (IEatObserver obj) {
+        int i = observers.indexOf(obj) ;
+        if ( i >= 0 )
+            observers.remove(i) ;
+    }
+    
+    public void notifyObservers(Actor actor) {
+        for (int i=0; i<observers.size(); i++)
+        {
+            IEatObserver observer = observers.get(i) ;
+            observer.notify();
+        }
     }
     /*
     private int points;

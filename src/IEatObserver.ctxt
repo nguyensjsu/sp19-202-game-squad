@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=IEatObserver
+comment1.params=actor
+comment1.target=void\ invoke(greenfoot.Actor)
+numComments=2
