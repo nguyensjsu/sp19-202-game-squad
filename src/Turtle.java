@@ -21,6 +21,15 @@ public class Turtle extends Animal implements KeyListener, IEatSubject
     {
         move(WorldConfig.TURTLE_SPEED);
         checkKeys();
+        if(canSee(Lettuce.class))
+        {
+            eat(Lettuce.class);  
+            Greenfoot.playSound("slurp.wav");
+        } else if(canSee(RedLettuce.class))
+        {
+            eat(RedLettuce.class); 
+            Greenfoot.playSound("slurp.wav");
+        }
         //eat();
     }
 
@@ -48,33 +57,27 @@ public class Turtle extends Animal implements KeyListener, IEatSubject
     }
 
     public void keyLeftAction() {
-        if (this.powerDecorator != null) {
-            this.powerDecorator.keyLeftAction();
-        } else {
+        
             turn(-WorldConfig.TURTLE_DEGREE);
-        }
+        
     }
 
      public void keyRightAction() {
-          if (this.powerDecorator != null) {
-            this.powerDecorator.keyLeftAction();
-        } else {
+        
             turn(WorldConfig.TURTLE_DEGREE);
-        }
+        
     }
 
      public void keyUpAction() {
           if (this.powerDecorator != null) {
-            this.powerDecorator.keyLeftAction();
+            this.powerDecorator.keyUpAction();
           } 
     }
 
      public void keyDownAction() {
-          if (this.powerDecorator != null) {
-            this.powerDecorator.keyLeftAction();
-        } else {
+          
             move(-WorldConfig.TURTLE_SPEED);
-        }
+        
     }
     
     public void setDecorator(PowerDecorator powerDecorator) {
@@ -88,8 +91,11 @@ public class Turtle extends Animal implements KeyListener, IEatSubject
     public void eat(Class clss)
     {
         Actor actor = getOneObjectAtOffset(0, 0, clss);
+       
         if(actor != null) {
+            String className = actor.getClass().getName();
             getWorld().removeObject(actor);
+            notifyObservers(className);
         }
     }
     
@@ -103,11 +109,11 @@ public class Turtle extends Animal implements KeyListener, IEatSubject
             observers.remove(i) ;
     }
     
-    public void notifyObservers(Actor actor) {
+    public void notifyObservers(String className) {
         for (int i=0; i<observers.size(); i++)
         {
             IEatObserver observer = observers.get(i) ;
-            observer.notify();
+            observer.invoke(className);
         }
     }
     /*

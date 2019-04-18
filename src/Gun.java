@@ -1,9 +1,11 @@
+
 /**
  * Write a description of class Gun here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
+import greenfoot.*; 
 public class Gun extends PowerDecorator 
 {
     KeyListener keyListener;
@@ -19,11 +21,16 @@ public class Gun extends PowerDecorator
     }
 
     public void keyUpAction() {
+        if (this.shots > 0) {
+        Actor a = (Actor)this.keyListener;
         Shot shot = new Shot(5);
-        getWorld().addObject(shot, getX(), getY());
-        shot.setRotation(getRotation());
+        World world = Turtle.getTurtle().getWorld();
+        world.addObject(shot, a.getX(), a.getY());
+        shot.setRotation(Turtle.getTurtle().getRotation());
         shot.move(55);
         move(WorldConfig.TURTLE_SPEED);
+        this.shots -= 1;
+      }
     }
     
 }
