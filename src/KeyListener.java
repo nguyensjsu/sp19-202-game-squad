@@ -4,4 +4,5 @@ public interface KeyListener
     void keyRightAction();
     void keyUpAction();
     void keyDownAction();
+    void keySpaceAction();
 }

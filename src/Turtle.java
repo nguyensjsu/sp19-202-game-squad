@@ -6,7 +6,7 @@ import greenfoot.*;
 /*
  * Turtle class, singleton
  */
-public class Turtle extends Animal implements KeyListener, IEatSubject {
+public class Turtle extends Animal implements IEatSubject {
   private static Turtle turtle = new Turtle();
   private PowerDecorator powerDecorator = null;
   List<IEatObserver> observers;
@@ -26,8 +26,8 @@ public class Turtle extends Animal implements KeyListener, IEatSubject {
       eat(Lettuce.class);
     } else if (canSee(RedLettuce.class)) {
       eat(RedLettuce.class);
-    } else if (canSee(Bug.class))  {
-        eat(Bug.class);
+    } else if (canSee(Bug.class)) {
+      eat(Bug.class);
     }
   }
 
@@ -49,27 +49,27 @@ public class Turtle extends Animal implements KeyListener, IEatSubject {
     }
   }
 
+  public void keySpaceAction() {
+    if (this.powerDecorator != null) {
+      this.powerDecorator.keySpaceAction();
+    }
+  }
+
   public void keyLeftAction() {
-
     turn(-WorldConfig.TURTLE_DEGREE);
-
   }
 
   public void keyRightAction() {
-
     turn(WorldConfig.TURTLE_DEGREE);
 
   }
 
   public void keyUpAction() {
     move(WorldConfig.TURTLE_SPEED);
-    // if (this.powerDecorator != null) {
-    //  this.powerDecorator.keyUpAction();
-    //}
+    keySpaceAction();
   }
 
   public void keyDownAction() {
-
     move(-WorldConfig.TURTLE_SPEED);
 
   }
