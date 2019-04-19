@@ -1,5 +1,5 @@
 import greenfoot.*;
-public class PowerDecorator extends Actor implements KeyListener 
+public class PowerDecorator extends Actor
 {
    
     KeyListener keyListener;
@@ -23,6 +23,10 @@ public class PowerDecorator extends Actor implements KeyListener
     
     public void keyDownAction() {
        keyListener.keyDownAction();
+    }
+    
+    public void keySpaceAction() {
+       keyListener.keySpaceAction();
     }
 }
 
