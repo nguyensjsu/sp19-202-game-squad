@@ -30,6 +30,8 @@ public class Gun extends PowerDecorator
         shot.move(55);
         move(WorldConfig.TURTLE_SPEED);
         this.shots -= 1;
+        if (this.shots == 0)
+            Turtle.getTurtle().removeDecorator();
       }
     }
     
