@@ -6,7 +6,7 @@
  */
 
 import greenfoot.*;
-public class PowerDecorator implements KeyListener 
+public class PowerDecorator extends Actor implements KeyListener 
 {
    
     KeyListener keyListener;

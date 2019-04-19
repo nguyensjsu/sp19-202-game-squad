@@ -9,12 +9,14 @@ import greenfoot.*;
 
 public class Shot extends Actor
 {
-   
+    int gunShots;
+    
     /**
      * Constructor for objects of class Shot
      */
-    public Shot()
+    public Shot(int gunShots)
     {
+       this.gunShots = gunShots;
     }
     
     public void act()

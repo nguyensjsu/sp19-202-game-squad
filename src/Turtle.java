@@ -1,14 +1,17 @@
-
+import java.util.ArrayList;
 import greenfoot.*; 
 /*
  * Turtle class, singleton
  */
-public class Turtle extends Animal implements KeyListener
+public class Turtle extends Animal implements KeyListener, IEatSubject
 {
     private static Turtle turtle = new Turtle();
     private PowerDecorator powerDecorator = null;
+    ArrayList<IEatObserver> observers;
 
-    private Turtle() {}
+    private Turtle() {
+        observers = new ArrayList<IEatObserver>();
+    }
     
     public static Turtle getTurtle() {
      return turtle;   
@@ -18,6 +21,15 @@ public class Turtle extends Animal implements KeyListener
     {
         move(WorldConfig.TURTLE_SPEED);
         checkKeys();
+        if(canSee(Lettuce.class))
+        {
+            eat(Lettuce.class);  
+            Greenfoot.playSound("slurp.wav");
+        } else if(canSee(RedLettuce.class))
+        {
+            eat(RedLettuce.class); 
+            Greenfoot.playSound("slurp.wav");
+        }
         //eat();
     }
 
@@ -45,39 +57,27 @@ public class Turtle extends Animal implements KeyListener
     }
 
     public void keyLeftAction() {
-        if (this.powerDecorator != null) {
-            this.powerDecorator.keyLeftAction();
-        } else {
+        
             turn(-WorldConfig.TURTLE_DEGREE);
-        }
+        
     }
 
      public void keyRightAction() {
-          if (this.powerDecorator != null) {
-            this.powerDecorator.keyLeftAction();
-        } else {
+        
             turn(WorldConfig.TURTLE_DEGREE);
-        }
+        
     }
 
      public void keyUpAction() {
           if (this.powerDecorator != null) {
-            this.powerDecorator.keyLeftAction();
-        } else {
-            Shot shot = new Shot();
-            getWorld().addObject(shot, getX(), getY());
-            shot.setRotation(getRotation());
-            shot.move(55);
-            move(WorldConfig.TURTLE_SPEED);
-        }
+            this.powerDecorator.keyUpAction();
+          } 
     }
 
      public void keyDownAction() {
-          if (this.powerDecorator != null) {
-            this.powerDecorator.keyLeftAction();
-        } else {
+          
             move(-WorldConfig.TURTLE_SPEED);
-        }
+        
     }
     
     public void setDecorator(PowerDecorator powerDecorator) {
@@ -86,6 +86,35 @@ public class Turtle extends Animal implements KeyListener
 
     public void removeDecorator() {
         this.powerDecorator = null;
+    }
+    
+    public void eat(Class clss)
+    {
+        Actor actor = getOneObjectAtOffset(0, 0, clss);
+       
+        if(actor != null) {
+            String className = actor.getClass().getName();
+            getWorld().removeObject(actor);
+            notifyObservers(className);
+        }
+    }
+    
+    public void attach (IEatObserver obj) {
+        observers.add(obj);
+    }
+    
+    public void removeObserver (IEatObserver obj) {
+        int i = observers.indexOf(obj) ;
+        if ( i >= 0 )
+            observers.remove(i) ;
+    }
+    
+    public void notifyObservers(String className) {
+        for (int i=0; i<observers.size(); i++)
+        {
+            IEatObserver observer = observers.get(i) ;
+            observer.invoke(className);
+        }
     }
     /*
     private int points;

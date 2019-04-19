@@ -31,6 +31,7 @@ public class TurtleWorld extends AbstractWorld
         addObject(counter, 58, 26);
         Turtle turtle = Turtle.getTurtle();
         addObject(turtle,100,100);
+        turtle.attach(new RedLettuceObserver());
         manager.createLettuce();
         /*
         Lettuce lettuce = new Lettuce();
