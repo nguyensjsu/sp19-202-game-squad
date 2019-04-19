@@ -3,8 +3,9 @@ import greenfoot.*;
 /*
  * Turtle class, singleton
  */
-public class Turtle extends Animal
+public class Turtle extends Animal implements IComponent
 {
+    private static Shield shield = new Shield();
     private static Turtle turtle = new Turtle();
     
     private Turtle() {}

@@ -8,27 +8,67 @@ import greenfoot.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Shield extends Actor 
+public class Shield extends Actor implements IComponent
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private int power;
 
     /**
      * Constructor for objects of class Shield
      */
     public Shield()
     {
+        power = 5;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+            public void act()
     {
-        // put your code here
-        return x + y;
+        move(WorldConfig.TURTLE_SPEED);
+        checkKeys();
+        //eat();
     }
+
+    public class Turtle extends Animal implements IComponent
+{
+    private static Turtle turtle = new Turtle();
+    private static Shield shield = new Shield();
+    
+    private Turtle() {}
+    
+    public static Turtle getTurtle() {
+     return turtle;   
+    }
+    
+        public void act()
+    {
+        move(WorldConfig.TURTLE_SPEED);
+        checkKeys();
+        
+    }
+
+    public void checkKeys()
+    {
+        if (Greenfoot.isKeyDown("Left"))
+        {
+            turn(-WorldConfig.TURTLE_DEGREE);
+        }
+
+        if (Greenfoot.isKeyDown("Right"))
+        {
+            turn(WorldConfig.TURTLE_DEGREE);
+        }
+
+        if (Greenfoot.isKeyDown("Up"))
+        {
+            move(WorldConfig.TURTLE_SPEED);
+        }
+
+        if (Greenfoot.isKeyDown("Down"))
+        {
+            move(-WorldConfig.TURTLE_SPEED);
+        }
+    }
+
+    
+    
 }
