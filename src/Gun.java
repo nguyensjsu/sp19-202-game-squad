@@ -20,7 +20,7 @@ public class Gun extends PowerDecorator
         this.keyListener = keyListener;
     }
 
-    public void keyUpAction() {
+    public void keySpaceAction() {
         if (this.shots > 0) {
         Actor a = (Actor)this.keyListener;
         Shot shot = new Shot(5);

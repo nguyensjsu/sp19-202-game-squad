@@ -4,5 +4,5 @@ comment1.params=keyListener
 comment1.target=Gun(KeyListener)
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Gun\n
 comment2.params=
-comment2.target=void\ keyUpAction()
+comment2.target=void\ keySpaceAction()
 numComments=3

@@ -54,6 +54,11 @@ public class Turtle extends Animal implements KeyListener, IEatSubject
         {
            keyDownAction();
         }
+        
+        if (Greenfoot.isKeyDown("Space"))
+        {
+           keySpaceAction();
+        }
     }
 
     public void keyLeftAction() {
@@ -69,14 +74,20 @@ public class Turtle extends Animal implements KeyListener, IEatSubject
     }
 
      public void keyUpAction() {
-          if (this.powerDecorator != null) {
-            this.powerDecorator.keyUpAction();
-          } 
+          turn(WorldConfig.TURTLE_DEGREE);
     }
 
      public void keyDownAction() {
           
             move(-WorldConfig.TURTLE_SPEED);
+        
+    }
+    
+    public void keySpaceAction() {
+          
+            if (this.powerDecorator != null) {
+            this.powerDecorator.keySpaceAction();
+          } 
         
     }
     

@@ -62,4 +62,8 @@ public class Animal extends Actor implements KeyListener
      public void keyDownAction() {
         // do nothing
     }
+    
+    public void keySpaceAction() {
+        // do nothing
+    }
 }
