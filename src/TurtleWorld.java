@@ -1,9 +1,8 @@
-import greenfoot.*;  // imports Actor, World, Greenfoot, GreenfootImage
+import greenfoot.*;
 
 public class TurtleWorld extends AbstractWorld
 {
     
-    ActorManager manager = new ActorManager();
     public TurtleWorld(DirectorState director) {
         super(director);
     }
@@ -27,12 +26,25 @@ public class TurtleWorld extends AbstractWorld
     
     public void prepare()
     {
+
+        int worldWidth = getWidth();
+        int worldHeight = getHeight();
+
+        ActorManager actorManager = new ActorManager();
+        ScoreManager scoreManager = new ScoreManager(actorManager);
         Counter counter = new Counter();
         addObject(counter, 58, 26);
+        counter.attach(scoreManager);
         Turtle turtle = Turtle.getTurtle();
         addObject(turtle,100,100);
         turtle.attach(new RedLettuceObserver());
-        manager.createLettuce();
+        turtle.attach(counter);
+        turtle.attach(actorManager);
+        actorManager.createLettuce();
+        addObject(new Bug() , Greenfoot.getRandomNumber(worldWidth), Greenfoot.getRandomNumber(worldHeight));
+        // temporary FIXME
+        ActorFactory factory = new ActorGenerator();
+            factory.createActor(Snake.class.getName(), Greenfoot.getRandomNumber(worldWidth), Greenfoot.getRandomNumber(worldHeight));
         /*
         Lettuce lettuce = new Lettuce();
         addObject(lettuce,395,135);

@@ -1,10 +1,3 @@
-/**
- * Write a description of class PowerDecorator here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-
 import greenfoot.*;
 public class PowerDecorator extends Actor implements KeyListener 
 {
@@ -24,11 +17,11 @@ public class PowerDecorator extends Actor implements KeyListener
          keyListener.keyRightAction();
     }
     
-     public void keyUpAction() {
+    public void keyUpAction() {
         keyListener.keyUpAction();
     }
     
-     public void keyDownAction() {
+    public void keyDownAction() {
        keyListener.keyDownAction();
     }
 }

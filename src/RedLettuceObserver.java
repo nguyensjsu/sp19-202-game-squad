@@ -13,9 +13,8 @@ public class RedLettuceObserver implements IEatObserver
     public RedLettuceObserver()
     {
     }
-
+    
     public void invoke(String className) {
-        System.out.println("In observer..." + className);
         if (RedLettuce.class.getName().equalsIgnoreCase(className)) {
             Turtle turtle = Turtle.getTurtle();
             PowerDecorator p = new Gun(turtle);

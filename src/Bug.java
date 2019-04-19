@@ -14,7 +14,7 @@ public class Bug extends Animal
      */
     public void act() 
     {
-        move(5);
+        move(WorldConfig.BUG_SPEED);
         randomTurn();
         worldEdge();
     }
