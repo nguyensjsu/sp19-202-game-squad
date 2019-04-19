@@ -5,9 +5,7 @@
  * @version (a version number or a date)
  */
 
-import greenfoot.*;
-
-public class RedLettuceObserver implements IEatObserver 
+public class RedLettuceObserver implements IEatObserver
 {
    
     public RedLettuceObserver()
@@ -17,8 +15,8 @@ public class RedLettuceObserver implements IEatObserver
     public void invoke(String className) {
         if (RedLettuce.class.getName().equalsIgnoreCase(className)) {
             Turtle turtle = Turtle.getTurtle();
-            PowerDecorator p = new Gun(turtle);
-            turtle.setDecorator(p);
+            //PowerDecorator p = new Gun();
+            //turtle.setDecorator(p);
         }
     }
 }

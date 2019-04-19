@@ -6,13 +6,13 @@ import greenfoot.*;
 /*
  * Turtle class, singleton
  */
-public class Turtle extends Animal implements KeyListener, IEatSubject {
+public class Turtle extends Animal implements IEatSubject {
   private static Turtle turtle = new Turtle();
   private PowerDecorator powerDecorator = null;
   List<IEatObserver> observers;
 
   private Turtle() {
-    observers = new ArrayList<IEatObserver>();
+    observers = new ArrayList<>();
   }
 
   public static Turtle getTurtle() {
@@ -26,8 +26,8 @@ public class Turtle extends Animal implements KeyListener, IEatSubject {
       eat(Lettuce.class);
     } else if (canSee(RedLettuce.class)) {
       eat(RedLettuce.class);
-    } else if (canSee(Bug.class))  {
-        eat(Bug.class);
+    } else if (canSee(Bug.class)) {
+      eat(Bug.class);
     }
   }
 
@@ -40,7 +40,7 @@ public class Turtle extends Animal implements KeyListener, IEatSubject {
       keyRightAction();
     }
 
-    if ("up".equals(Greenfoot.getKey())) {
+    if (Greenfoot.isKeyDown("Up")) {
       keyUpAction();
     }
 
@@ -62,9 +62,13 @@ public class Turtle extends Animal implements KeyListener, IEatSubject {
   }
 
   public void keyDownAction() {
-
     move(-WorldConfig.TURTLE_SPEED);
+  }
 
+  public void keySpaceAction() {
+    if (this.powerDecorator != null) {
+      this.powerDecorator.keySpaceAction();
+    }
   }
 
   public void setDecorator(PowerDecorator powerDecorator) {
