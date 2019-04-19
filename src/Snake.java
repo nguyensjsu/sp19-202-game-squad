@@ -16,18 +16,16 @@ public class Snake extends Animal {
     }
 
     List<Turtle> turtles = this.getNeighbours(WorldConfig.SNAKES_ATTRACTION, true, Turtle.class);
-    System.out.println("number of turtles:" + turtles.size());
     if (!turtles.isEmpty()) {
-        this.setImage("snake2_red.png");
-      System.out.println("getting attracted by turtle:"  + this.getClass());
-      
+      this.setImage("snake2_red.png");
+      System.out.println("getting attracted by turtle:" + this.getClass());
+
       Turtle turtle = turtles.get(0);
       this.turnTowards(turtle.getX(), turtle.getY());
       move(1);
     } else {
-            move(WorldConfig.SPEED_OF_SNAKES);
-
-    this.setImage("snake2.png");
+      move(WorldConfig.SPEED_OF_SNAKES);
+      this.setImage("snake2.png");
       randomTurn();
     }
     worldEdge();
