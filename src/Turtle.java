@@ -12,7 +12,7 @@ public class Turtle extends Animal implements IEatSubject {
   List<IEatObserver> observers;
 
   private Turtle() {
-    observers = new ArrayList<IEatObserver>();
+    observers = new ArrayList<>();
   }
 
   public static Turtle getTurtle() {
@@ -40,18 +40,12 @@ public class Turtle extends Animal implements IEatSubject {
       keyRightAction();
     }
 
-    if ("up".equals(Greenfoot.getKey())) {
+    if (Greenfoot.isKeyDown("Up")) {
       keyUpAction();
     }
 
     if (Greenfoot.isKeyDown("Down")) {
       keyDownAction();
-    }
-  }
-
-  public void keySpaceAction() {
-    if (this.powerDecorator != null) {
-      this.powerDecorator.keySpaceAction();
     }
   }
 
@@ -61,17 +55,20 @@ public class Turtle extends Animal implements IEatSubject {
 
   public void keyRightAction() {
     turn(WorldConfig.TURTLE_DEGREE);
-
   }
 
   public void keyUpAction() {
     move(WorldConfig.TURTLE_SPEED);
-    keySpaceAction();
   }
 
   public void keyDownAction() {
     move(-WorldConfig.TURTLE_SPEED);
+  }
 
+  public void keySpaceAction() {
+    if (this.powerDecorator != null) {
+      this.powerDecorator.keySpaceAction();
+    }
   }
 
   public void setDecorator(PowerDecorator powerDecorator) {

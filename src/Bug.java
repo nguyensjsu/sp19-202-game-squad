@@ -19,27 +19,5 @@ public class Bug extends Animal
         worldEdge();
     }
 
-    /**
-     * 10% of the time turn at a random angle between -20 and 20.
-     */
-    public void randomTurn()
-    {
-        if (Greenfoot.getRandomNumber(100) < 10)
-        {
-            turn(Greenfoot.getRandomNumber(40)-20);
-        }
-    }
-
-    /**
-     * If we reach the end of the world, turn a little bit
-     */
-    public void worldEdge()
-    {
-        if (atWorldEdge())
-        {
-            turn(7);
-        }
-    }
-
       
 }

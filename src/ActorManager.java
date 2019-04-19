@@ -53,6 +53,35 @@ public class ActorManager implements IEatObserver {
     }
   }
 
+  public void createSnakes() {
+
+    World world = Turtle.getTurtle().getWorld();
+    List<Snake> snakes = world.getObjects(Snake.class);
+
+    int turtle_x = Turtle.getTurtle().getX();
+    int turtle_y = Turtle.getTurtle().getY();
+
+    int existing = snakes.size();
+
+    int worldWidth = world.getWidth();
+    int worldHeight = world.getHeight();
+
+    int remaining = WorldConfig.NUM_OF_SNAKES - existing;
+
+    int i = 0;
+    while (0 < remaining) {
+      int x = Greenfoot.getRandomNumber(worldWidth);
+      int y = Greenfoot.getRandomNumber(worldHeight);
+      if (x > turtle_x + 20 || x < turtle_x - 20 && y != turtle_y) {
+        factory.createActor(Snake.class.getName(), x, y);
+        remaining--;
+      } else {
+        System.err.println("same coordinates as turtle, reshuffle");
+      }
+
+    }
+  }
+
   public void createRedLettuce() {
     // only at multiple of 100 it should be created.
     // wait for 1 minute after that remove it.
@@ -81,10 +110,6 @@ public class ActorManager implements IEatObserver {
     }
   }
 
-
-
-
-
   public void createBug() {
 
     World world = Turtle.getTurtle().getWorld();
@@ -106,28 +131,29 @@ public class ActorManager implements IEatObserver {
   @Override
   public void invoke(String clss) {
     if (clss.equals(Lettuce.class.getName())) {
-      if (!threadQueued.contains(clss)) {
-        threadQueued.add(clss);
-        System.out.println("Green Lettuce scheduled:" + clss);
-        Thread thread = new Thread(() -> {
-          createLettuce();
-          threadQueued.remove(clss);
-        });
-        executor.schedule(thread, 30, TimeUnit.SECONDS);
-      }
-
+      queue(clss, () -> createLettuce(), WorldConfig.LETTUCE_CREATION_DELAY);
     }
 
     if (clss.equals(Bug.class.getName())) {
-      if (!threadQueued.contains(clss)) {
-        threadQueued.add(clss);
-        System.out.println("Bug scheduled:" + clss);
-        Thread thread = new Thread(() -> {
-          createBug();
-          threadQueued.remove(clss);
-        });
-        executor.schedule(thread, 60, TimeUnit.SECONDS);
-      }
+      queue(clss, () -> createBug(), WorldConfig.BUG_CREATION_DELAY);
+    }
+
+    //if (clss.equals(Snake.class.getName())) {
+    //  queue(clss, () -> createSnakes(), WorldConfig.SNAKE_CREATION_DELAY);
+    //}
+  }
+
+
+
+  private void queue(String clss, Runnable func, long delay) {
+    if (!threadQueued.contains(clss)) {
+      threadQueued.add(clss);
+      System.out.println(clss + " scheduled");
+      Thread thread = new Thread(() -> {
+        func.run();
+        threadQueued.remove(clss);
+      });
+      executor.schedule(thread, delay, TimeUnit.SECONDS);
     }
   }
 

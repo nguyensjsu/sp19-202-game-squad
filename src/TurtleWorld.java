@@ -41,10 +41,8 @@ public class TurtleWorld extends AbstractWorld
         turtle.attach(counter);
         turtle.attach(actorManager);
         actorManager.createLettuce();
-        addObject(new Bug() , Greenfoot.getRandomNumber(worldWidth), Greenfoot.getRandomNumber(worldHeight));
-        // temporary FIXME
-        ActorFactory factory = new ActorGenerator();
-            factory.createActor(Snake.class.getName(), Greenfoot.getRandomNumber(worldWidth), Greenfoot.getRandomNumber(worldHeight));
+        actorManager.createSnakes();
+        actorManager.createBug();
         /*
         Lettuce lettuce = new Lettuce();
         addObject(lettuce,395,135);
