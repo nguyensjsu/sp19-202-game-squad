@@ -14,6 +14,10 @@ public class Turtle extends Animal implements IComponent
      return turtle;   
     }
     
+    public static Shield getShield() {
+     return shield;   
+    }
+    
         public void act()
     {
         move(WorldConfig.TURTLE_SPEED);

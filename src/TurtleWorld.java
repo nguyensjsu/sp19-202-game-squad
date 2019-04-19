@@ -30,8 +30,13 @@ public class TurtleWorld extends AbstractWorld
         Counter counter = new Counter();
         addObject(counter, 58, 26);
         Turtle turtle = Turtle.getTurtle();
+        Shield shield = Turtle.getShield();
+        addObject(shield,100,100);
         addObject(turtle,100,100);
         manager.createLettuce();
+        
+        Snake snake3 = new Snake();
+        addObject(snake3,417,317);
         /*
         Lettuce lettuce = new Lettuce();
         addObject(lettuce,395,135);

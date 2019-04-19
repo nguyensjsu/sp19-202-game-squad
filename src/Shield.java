@@ -21,7 +21,42 @@ public class Shield extends Actor implements IComponent
         power = 5;
     }
 
-            public void act()
+    public Shield(int p)
+    {
+        power = p;
+    }
+    
+    public void snakeHit(){
+        power--;
+        setImage(power);
+    }
+    
+    public void setImage(int power){
+     switch(power){
+     case 1: 
+     setImage("shield1.png");
+     break;
+     case 2:
+     setImage("shield2.png");
+     break;
+     case 3:
+     setImage("shield3.png");
+     break;
+     case 4:
+     setImage("shield4.png");
+     break;
+     case 5:
+     setImage("shield5.png");
+     break;
+     default:
+     setImage("shield5.png");
+     break;
+     
+    }
+     
+    }
+    
+    public void act()
     {
         move(WorldConfig.TURTLE_SPEED);
         checkKeys();

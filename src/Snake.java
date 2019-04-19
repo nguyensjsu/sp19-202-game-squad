@@ -43,7 +43,8 @@ public class Snake extends Animal
     {
         if(canSee(Turtle.class))
         {
-         eat(Turtle.class);   
+         eat(Turtle.class);  
+         eat(Shield.class);  
          Greenfoot.playSound("gameover.wav");
          Greenfoot.stop();
         }
