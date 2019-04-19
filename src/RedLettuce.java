@@ -6,8 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class RedLettuce extends Actor
-{
+public class RedLettuce extends Actor {
     /**
      * Act - do whatever the Red wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -15,5 +14,6 @@ public class RedLettuce extends Actor
     public void act() 
     {
         // Add your action code here.
-    }    
+    }
+
 }
