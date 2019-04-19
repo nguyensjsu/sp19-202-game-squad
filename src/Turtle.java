@@ -50,22 +50,15 @@ public class Turtle extends Animal implements KeyListener, IEatSubject {
   }
 
   public void keyLeftAction() {
-
     turn(-WorldConfig.TURTLE_DEGREE);
-
   }
 
   public void keyRightAction() {
-
     turn(WorldConfig.TURTLE_DEGREE);
-
   }
 
   public void keyUpAction() {
     move(WorldConfig.TURTLE_SPEED);
-    // if (this.powerDecorator != null) {
-    //  this.powerDecorator.keyUpAction();
-    //}
   }
 
   public void keyDownAction() {
