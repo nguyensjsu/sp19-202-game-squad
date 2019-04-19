@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ScoreManager
+comment1.params=actorManager
+comment1.target=ScoreManager(ActorManager)
+comment2.params=score
+comment2.target=void\ scoreAction(int)
+numComments=3
