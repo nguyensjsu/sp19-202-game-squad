@@ -1,7 +1,7 @@
 public class ScoreManager implements IScoreObserver {
 
   // chain of responsibility pattern for other guys, game level up and game over. maybe
-  int redLettuceCounter = 0;
+  int redLettuceValidRequests = 0;
 
   private ActorManager actorManager;
 
@@ -11,12 +11,12 @@ public class ScoreManager implements IScoreObserver {
 
   @Override
   public void scoreAction(int score) {
-    int diff = score - (redLettuceCounter * WorldConfig.RED_LETTUCE_CREATION_ON_SCORE);
+    int diff = score - (redLettuceValidRequests * WorldConfig.RED_LETTUCE_CREATION_ON_SCORE);
     System.out.println("diff:"+diff);
     if (diff >= WorldConfig.RED_LETTUCE_CREATION_ON_SCORE) {
-      System.out.println("creating red lettuce");
       actorManager.createRedLettuce();
-      redLettuceCounter++;
+      redLettuceValidRequests++;
     }
   }
 }
+

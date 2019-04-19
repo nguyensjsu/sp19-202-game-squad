@@ -10,6 +10,7 @@ public class Counter extends Actor implements IEatObserver, IScoreSubject {
 
   List<IScoreObserver> observers;
 
+  int increments = 0;
 
   /**
    * Create a new counter, initialised to 0.
@@ -18,7 +19,9 @@ public class Counter extends Actor implements IEatObserver, IScoreSubject {
     observers = new ArrayList<>();
     background = getImage();  // get image from class
     value = 0;
+    increments = 0;
     updateImage();
+    System.out.println("Counter value: " + value);
   }
 
   /**
@@ -72,7 +75,13 @@ public class Counter extends Actor implements IEatObserver, IScoreSubject {
     if (clss.equals(Bug.class.getName())) {
       add(20);
     }
-    notifyObservers();
+    int diff = value - (increments * 10);
+    if (diff >= 10) {
+      System.out.println("notifiying score observers for score:" + value);
+      increments++;
+      notifyObservers();
+      System.out.println("value of counter :" + value + " obj:" + this.toString());
+    }
   }
 
   @Override

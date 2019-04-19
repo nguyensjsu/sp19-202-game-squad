@@ -22,7 +22,6 @@ public class ActorManager implements IEatObserver {
   private ScheduledExecutorService executor = Executors.newScheduledThreadPool(10);
 
   public ActorManager() {
-
   }
 
   public void createLettuce() {
@@ -30,53 +29,60 @@ public class ActorManager implements IEatObserver {
     lettuceSet = new HashSet<>();
 
     World world = Turtle.getTurtle().getWorld();
-    List<Lettuce> lettucs = world.getObjects(Lettuce.class);
+    if (world != null) {
+      List<Lettuce> lettucs = world.getObjects(Lettuce.class);
 
-    for (Lettuce lt : lettucs) {
-      lettuceSet.add(str(lt.getX(), lt.getY()));
-    }
-    int existing = lettucs.size();
+      for (Lettuce lt : lettucs) {
+        lettuceSet.add(str(lt.getX(), lt.getY()));
+      }
+      int existing = lettucs.size();
 
-    int worldWidth = world.getWidth();
-    int worldHeight = world.getHeight();
+      int worldWidth = world.getWidth();
+      int worldHeight = world.getHeight();
 
-    int remaining = WorldConfig.NUM_OF_LETTUCE - existing;
+      int remaining = WorldConfig.NUM_OF_LETTUCE - existing;
 
-    int i = 0;
-    while (0 < remaining) {
-      int x = Greenfoot.getRandomNumber(worldWidth);
-      int y = Greenfoot.getRandomNumber(worldHeight);
-      if (!lettuceSet.contains(str(x, y))) {
-        factory.createActor(Lettuce.class.getName(), x, y);
-        remaining--;
+      int i = 0;
+      while (0 < remaining) {
+        int x = Greenfoot.getRandomNumber(worldWidth);
+        int y = Greenfoot.getRandomNumber(worldHeight);
+        if (!lettuceSet.contains(str(x, y))) {
+          factory.createActor(Lettuce.class.getName(), x, y);
+          remaining--;
+        }
       }
     }
+
   }
 
   public void createSnakes() {
 
     World world = Turtle.getTurtle().getWorld();
-    List<Snake> snakes = world.getObjects(Snake.class);
 
-    int turtle_x = Turtle.getTurtle().getX();
-    int turtle_y = Turtle.getTurtle().getY();
+    if (world != null) {
+      List<Snake> snakes = world.getObjects(Snake.class);
 
-    int existing = snakes.size();
+      int turtle_x = Turtle.getTurtle().getX();
+      int turtle_y = Turtle.getTurtle().getY();
 
-    int worldWidth = world.getWidth();
-    int worldHeight = world.getHeight();
+      int existing = snakes.size();
 
-    int remaining = WorldConfig.NUM_OF_SNAKES - existing;
+      int worldWidth = world.getWidth();
+      int worldHeight = world.getHeight();
 
-    int i = 0;
-    while (0 < remaining) {
-      int x = Greenfoot.getRandomNumber(worldWidth);
-      int y = Greenfoot.getRandomNumber(worldHeight);
-      if (x > turtle_x + 20 || x < turtle_x - 20 && y != turtle_y) {
-        factory.createActor(Snake.class.getName(), x, y);
-        remaining--;
-      } else {
-        System.err.println("same coordinates as turtle, reshuffle");
+      int remaining = WorldConfig.NUM_OF_SNAKES - existing;
+
+      int i = 0;
+      while (0 < remaining) {
+        int x = Greenfoot.getRandomNumber(worldWidth);
+        int y = Greenfoot.getRandomNumber(worldHeight);
+        if (x > turtle_x + 20 || x < turtle_x - 20 && y != turtle_y) {
+          factory.createActor(Snake.class.getName(), x, y);
+          remaining--;
+        } else {
+          System.err.println("same coordinates as turtle, reshuffle");
+        }
+
       }
 
     }
@@ -86,41 +92,50 @@ public class ActorManager implements IEatObserver {
     // only at multiple of 100 it should be created.
     // wait for 1 minute after that remove it.
     World world = Turtle.getTurtle().getWorld();
-    List<RedLettuce> redLettucs = world.getObjects(RedLettuce.class);
 
-    if (redLettucs.isEmpty()) {
+    if (world != null) {
+      List<RedLettuce> redLettucs = world.getObjects(RedLettuce.class);
 
-      int worldWidth = world.getWidth();
-      int worldHeight = world.getHeight();
+      if (redLettucs.isEmpty()) {
+        System.out.println("creating red lettuce");
 
-      int x = Greenfoot.getRandomNumber(worldWidth);
-      int y = Greenfoot.getRandomNumber(worldHeight);
-      Actor lettuce = factory.createActor(RedLettuce.class.getName(), x, y);
+        int worldWidth = world.getWidth();
+        int worldHeight = world.getHeight();
 
-      String className = RedLettuce.class.getName();
-      if (!threadQueued.contains(className)) {
-        threadQueued.add(className);
-        System.out.println("Red Lettuce scheduled:" + className);
-        Thread thread = new Thread(() -> {
-          world.removeObject(lettuce);
-          threadQueued.remove(className);
-        });
-        executor.schedule(thread, 60, TimeUnit.SECONDS);
+        int x = Greenfoot.getRandomNumber(worldWidth);
+        int y = Greenfoot.getRandomNumber(worldHeight);
+        Actor lettuce = factory.createActor(RedLettuce.class.getName(), x, y);
+
+        String className = RedLettuce.class.getName();
+        if (!threadQueued.contains(className)) {
+          threadQueued.add(className);
+          System.out.println("Red Lettuce scheduled:" + className);
+          Thread thread = new Thread(() -> {
+            world.removeObject(lettuce);
+            threadQueued.remove(className);
+          });
+          executor.schedule(thread, 60, TimeUnit.SECONDS);
+        }
       }
     }
+
   }
 
   public void createBug() {
-
     World world = Turtle.getTurtle().getWorld();
-    List<Bug> bugs = world.getObjects(Bug.class);
-    int worldWidth = world.getWidth();
-    int worldHeight = world.getHeight();
 
-    if (bugs.isEmpty()) {
-      int x = Greenfoot.getRandomNumber(worldWidth);
-      int y = Greenfoot.getRandomNumber(worldHeight);
-      factory.createActor(Bug.class.getName(), x, y);
+    if (world != null) {
+      List<Bug> bugs = world.getObjects(Bug.class);
+      int worldWidth = world.getWidth();
+      int worldHeight = world.getHeight();
+
+      if (bugs.isEmpty()) {
+        int x = Greenfoot.getRandomNumber(worldWidth);
+        int y = Greenfoot.getRandomNumber(worldHeight);
+        factory.createActor(Bug.class.getName(), x, y);
+      }
+    } else {
+      System.err.println("world null");
     }
   }
 
@@ -142,7 +157,6 @@ public class ActorManager implements IEatObserver {
     //  queue(clss, () -> createSnakes(), WorldConfig.SNAKE_CREATION_DELAY);
     //}
   }
-
 
 
   private void queue(String clss, Runnable func, long delay) {

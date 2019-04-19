@@ -30,6 +30,8 @@ public class WorldConfig
     public static int BUG_SPEED = 1;
     public static int BUG_CREATION_DELAY = 60;
 
+    public static int LEVEL_UP_NUM = 20;
+
 
     public static int getX() {
         return x;

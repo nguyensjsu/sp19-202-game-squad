@@ -1,6 +1,6 @@
 import greenfoot.*;
 
-public class TurtleWorld extends AbstractWorld
+public class TurtleWorld extends World
 {
     
     public TurtleWorld(DirectorState director) {
