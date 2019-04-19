@@ -138,10 +138,12 @@ public class ActorManager implements IEatObserver {
       queue(clss, () -> createBug(), WorldConfig.BUG_CREATION_DELAY);
     }
 
-    if (clss.equals(Snake.class.getName())) {
-      queue(clss, () -> createSnakes(), WorldConfig.SNAKE_CREATION_DELAY);
-    }
+    //if (clss.equals(Snake.class.getName())) {
+    //  queue(clss, () -> createSnakes(), WorldConfig.SNAKE_CREATION_DELAY);
+    //}
   }
+
+
 
   private void queue(String clss, Runnable func, long delay) {
     if (!threadQueued.contains(clss)) {
