@@ -28,24 +28,6 @@ public class Shield extends Actor implements IComponent
         //eat();
     }
 
-    public class Turtle extends Animal implements IComponent
-{
-    private static Turtle turtle = new Turtle();
-    private static Shield shield = new Shield();
-    
-    private Turtle() {}
-    
-    public static Turtle getTurtle() {
-     return turtle;   
-    }
-    
-        public void act()
-    {
-        move(WorldConfig.TURTLE_SPEED);
-        checkKeys();
-        
-    }
-
     public void checkKeys()
     {
         if (Greenfoot.isKeyDown("Left"))
@@ -69,6 +51,6 @@ public class Shield extends Actor implements IComponent
         }
     }
 
-    
-    
-}
+}    
+  
+
