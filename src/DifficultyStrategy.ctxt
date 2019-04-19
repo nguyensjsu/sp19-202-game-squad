@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=DifficultyStrategy
-comment0.text=\r\n\ Interface\ DifficutlyStrategy\r\n\ This\ interface\ defines\ interface\ for\ strategy\ pattern\ for\ difficulty\ levels\ (i.e.\ Low,\ Medium,\ High)\r\n\ @author\ (Saumil\ Patel)\ \r\n
+comment0.text=\n\ Interface\ DifficutlyStrategy\n\ This\ interface\ defines\ interface\ for\ strategy\ pattern\ for\ difficulty\ levels\ (i.e.\ Low,\ Medium,\ High)\n\ @author\ (Saumil\ Patel)\ \n
 comment1.params=
 comment1.target=int\ getNumberOfSnakes()
 comment2.params=

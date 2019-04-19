@@ -6,9 +6,10 @@ import greenfoot.*;
 /*
  * Turtle class, singleton
  */
+
 public class Turtle extends Animal implements IEatSubject {
+  private static Shield shield = new Shield();
   private static Turtle turtle = new Turtle();
-  private PowerDecorator powerDecorator = null;
   List<IEatObserver> observers;
 
   private Turtle() {
@@ -17,6 +18,10 @@ public class Turtle extends Animal implements IEatSubject {
 
   public static Turtle getTurtle() {
     return turtle;
+  }
+  
+  public static Shield getShield() {
+    return shield;   
   }
 
   public void act() {
@@ -63,20 +68,6 @@ public class Turtle extends Animal implements IEatSubject {
 
   public void keyDownAction() {
     move(-WorldConfig.TURTLE_SPEED);
-  }
-
-  public void keySpaceAction() {
-    if (this.powerDecorator != null) {
-      this.powerDecorator.keySpaceAction();
-    }
-  }
-
-  public void setDecorator(PowerDecorator powerDecorator) {
-    this.powerDecorator = powerDecorator;
-  }
-
-  public void removeDecorator() {
-    this.powerDecorator = null;
   }
 
   public void eat(Class clss) {

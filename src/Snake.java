@@ -32,15 +32,19 @@ public class Snake extends Animal {
     eatTurtle();
   }
 
-  /**
-   * Check if lettuce there and then eat
-   */
-  public void eatTurtle() {
-    if (canSee(Turtle.class)) {
-      eat(Turtle.class);
-      Greenfoot.playSound("gameover.wav");
-      Greenfoot.stop();
-    }
-  }
-
+    
+    /**
+     * Check if lettuce there and then eat
+     */
+    public void eatTurtle()
+    {
+        if(canSee(Turtle.class) && (Turtle.getShield().power == 1))
+        {
+         eat(Turtle.class);  
+         eat(Shield.class);  
+         Greenfoot.playSound("gameover.wav");
+         Greenfoot.stop();
+        }
+    }   
+      
 }

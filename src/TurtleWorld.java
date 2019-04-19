@@ -36,6 +36,8 @@ public class TurtleWorld extends AbstractWorld
         addObject(counter, 58, 26);
         counter.attach(scoreManager);
         Turtle turtle = Turtle.getTurtle();
+        Shield shield = Turtle.getShield();
+        addObject(shield,100,100);
         addObject(turtle,100,100);
         turtle.attach(new RedLettuceObserver());
         turtle.attach(counter);
@@ -43,6 +45,10 @@ public class TurtleWorld extends AbstractWorld
         actorManager.createLettuce();
         actorManager.createSnakes();
         actorManager.createBug();
+        actorManager.createLettuce();
+        
+        Snake snake3 = new Snake();
+        addObject(snake3,417,317);
         /*
         Lettuce lettuce = new Lettuce();
         addObject(lettuce,395,135);
