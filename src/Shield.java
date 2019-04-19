@@ -8,10 +8,10 @@ import greenfoot.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Shield extends Actor implements IComponent
+public class Shield extends Animal implements IComponent
 {
     // instance variables - replace the example below with your own
-    private int power;
+    public int power;
 
     /**
      * Constructor for objects of class Shield
@@ -28,7 +28,7 @@ public class Shield extends Actor implements IComponent
     
     public void snakeHit(){
         power--;
-        setImage(power);
+        this.setImage(power);
     }
     
     public void setImage(int power){
@@ -60,6 +60,9 @@ public class Shield extends Actor implements IComponent
     {
         move(WorldConfig.TURTLE_SPEED);
         checkKeys();
+        if(canSee(Snake.class)){
+            snakeHit();
+        }
         //eat();
     }
 

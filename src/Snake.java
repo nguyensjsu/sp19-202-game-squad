@@ -41,7 +41,7 @@ public class Snake extends Animal
      */
     public void eatTurtle()
     {
-        if(canSee(Turtle.class))
+        if(canSee(Turtle.class) && (Turtle.getShield().power == 1))
         {
          eat(Turtle.class);  
          eat(Shield.class);  
