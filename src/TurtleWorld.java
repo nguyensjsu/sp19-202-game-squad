@@ -1,48 +1,64 @@
 import greenfoot.*;
 
-public class TurtleWorld extends AbstractWorld
-{
-    
-    public TurtleWorld(DirectorState director) {
-        super(director);
-    }
-   
-    public void setEndGameState() {
-        this.director.setState(new EndWorld(director));
-    }
-    
-    public void setPlayGameState() {
-        this.director.setState(this);
-    }
-    
-    public void setLevelUpState() {
-        this.director.setState(new LevelUpWorld(director));
-    }
-    
-    public void setInitState() {
-        this.director.setState(new InitState(director));
-    }
-   
-    
-    public void prepare()
-    {
+public class TurtleWorld extends World {
 
-        int worldWidth = getWidth();
-        int worldHeight = getHeight();
+  public TurtleWorld() {
+    super(WorldConfig.getX(), WorldConfig.getY(), WorldConfig.getCellSize());
+    System.out.println("construc call");
+    reinitialize();
+  }
 
-        ActorManager actorManager = new ActorManager();
-        ScoreManager scoreManager = new ScoreManager(actorManager);
-        Counter counter = new Counter();
-        addObject(counter, 58, 26);
-        counter.attach(scoreManager);
-        Turtle turtle = Turtle.getTurtle();
-        addObject(turtle,100,100);
-        turtle.attach(new RedLettuceObserver());
-        turtle.attach(counter);
-        turtle.attach(actorManager);
-        actorManager.createLettuce();
-        actorManager.createSnakes();
-        actorManager.createBug();
+  public void loadEndScreen(String text) {
+    deleteAll();
+    endScreen(text);
+  }
+
+  public void endScreen(String text) {
+    showText(text,400,300);
+  }
+
+  public void loadPlayScreen() {
+    deleteAll();
+    reinitialize();
+  }
+
+  public void loadInitScreen() {
+    deleteAll();
+    initScreen();
+  }
+
+  private void initScreen() {
+    // init function
+
+  }
+
+  private void reinitialize() {
+    int worldWidth = getWidth();
+    int worldHeight = getHeight();
+
+    ActorManager actorManager = new ActorManager();
+    ScoreManager scoreManager = new ScoreManager(actorManager);
+    Counter counter = new Counter();
+    addObject(counter, 58, 26);
+    counter.attach(scoreManager);
+    // counter.attach(director) this was to level up
+    Turtle turtle = Turtle.init();
+    addObject(turtle, 100, 100);
+    turtle.attach(new RedLettuceObserver());
+    turtle.attach(counter);
+    turtle.attach(actorManager);
+    actorManager.createLettuce();
+    actorManager.createSnakes();
+    actorManager.createBug();
+  }
+
+
+  private void deleteAll() {
+    removeObjects(getObjects(null));
+  }
+
+
+
         /*
         Lettuce lettuce = new Lettuce();
         addObject(lettuce,395,135);
@@ -171,5 +187,4 @@ public class TurtleWorld extends AbstractWorld
         Snake snake34 = new Snake();
         addObject(snake34,486,71);
         */
-    }
 }

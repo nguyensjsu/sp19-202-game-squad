@@ -10,7 +10,6 @@ public class Snake extends Animal {
   public void act() {
     List<Snake> snakes = this.getNeighbours(30, false, Snake.class);
     if (!snakes.isEmpty()) {
-      System.out.println("another snake near vicinity and moving ");
       this.turn(WorldConfig.TURTLE_DEGREE);
       move(WorldConfig.SPEED_OF_SNAKES * 5);
     }
@@ -18,7 +17,6 @@ public class Snake extends Animal {
     List<Turtle> turtles = this.getNeighbours(WorldConfig.SNAKES_ATTRACTION, true, Turtle.class);
     if (!turtles.isEmpty()) {
       this.setImage("snake2_red.png");
-      System.out.println("getting attracted by turtle:" + this.getClass());
 
       Turtle turtle = turtles.get(0);
       this.turnTowards(turtle.getX(), turtle.getY());

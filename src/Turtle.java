@@ -7,7 +7,7 @@ import greenfoot.*;
  * Turtle class, singleton
  */
 public class Turtle extends Animal implements IEatSubject {
-  private static Turtle turtle = new Turtle();
+  private static Turtle turtle;
   private PowerDecorator powerDecorator = null;
   List<IEatObserver> observers;
 
@@ -16,6 +16,14 @@ public class Turtle extends Animal implements IEatSubject {
   }
 
   public static Turtle getTurtle() {
+    if (turtle == null) {
+      return init();
+    }
+    return turtle;
+  }
+
+  public static Turtle init() {
+    turtle = new Turtle();
     return turtle;
   }
 
