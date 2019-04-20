@@ -89,6 +89,7 @@ public class ActorManager implements IEatObserver {
     List<RedLettuce> redLettucs = world.getObjects(RedLettuce.class);
 
     if (redLettucs.isEmpty()) {
+      System.out.println("creating red lettuce");
 
       int worldWidth = world.getWidth();
       int worldHeight = world.getHeight();
@@ -111,7 +112,7 @@ public class ActorManager implements IEatObserver {
   }
 
   public void createBug() {
-
+ // FIXME world check npe
     World world = Turtle.getTurtle().getWorld();
     List<Bug> bugs = world.getObjects(Bug.class);
     int worldWidth = world.getWidth();

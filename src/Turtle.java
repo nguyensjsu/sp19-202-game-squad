@@ -6,13 +6,19 @@ import greenfoot.*;
 /*
  * Turtle class, singleton
  */
-public class Turtle extends Animal implements IEatSubject {
+public class Turtle extends Animal implements IEatSubject, IComponent {
   private static Turtle turtle;
   private PowerDecorator powerDecorator = null;
   List<IEatObserver> observers;
 
+  private static Shield shield = new Shield();
+
   private Turtle() {
     observers = new ArrayList<>();
+  }
+
+  public void snakeHit() {
+      shield.snakeHit();
   }
 
   public static Turtle getTurtle() {
@@ -22,12 +28,21 @@ public class Turtle extends Animal implements IEatSubject {
     return turtle;
   }
 
+  public static Shield getShield() {
+    return shield;
+  }
+
   public static Turtle init() {
     turtle = new Turtle();
     return turtle;
   }
 
   public void act() {
+      moveactor();
+      shield.moveactor();
+  }
+  
+  public void moveactor() {
     move(WorldConfig.TURTLE_SPEED);
     checkKeys();
     if (canSee(Lettuce.class)) {

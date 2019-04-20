@@ -43,6 +43,8 @@ public class TurtleWorld extends World {
     counter.attach(scoreManager);
     // counter.attach(director) this was to level up
     Turtle turtle = Turtle.init();
+    Shield shield = Turtle.getShield();
+    addObject(shield,100,100);
     addObject(turtle, 100, 100);
     turtle.attach(new RedLettuceObserver());
     turtle.attach(counter);
