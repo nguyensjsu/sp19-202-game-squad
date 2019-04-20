@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=DifficultyLevelHigh
+comment0.text=\n\ @author\ (Saumil)\n
+comment1.params=
+comment1.target=DifficultyLevelHigh()
+comment2.params=
+comment2.target=int\ getNumberOfSnakes()
+comment3.params=
+comment3.target=int\ getSpeedOfSnake()
+comment4.params=
+comment4.target=int\ getSnakeVisibilityRadius()
+numComments=5

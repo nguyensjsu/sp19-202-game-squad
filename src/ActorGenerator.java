@@ -15,6 +15,13 @@ public class ActorGenerator implements ActorFactory
         }
         return actor;
     }
+
+    /**
+     * on turtle eat ->
+     * kill manager will observe to kill the actor
+     * counter will observe to increase score
+     * actor manager will observe to create actors
+     */
     
     private Actor createSnake(int x, int y) {
         Snake snake = new Snake();

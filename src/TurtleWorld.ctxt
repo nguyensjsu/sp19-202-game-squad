@@ -1,15 +1,13 @@
 #BlueJ class context
 comment0.target=TurtleWorld
-comment1.params=director
-comment1.target=TurtleWorld(DirectorState)
+comment1.params=
+comment1.target=TurtleWorld()
 comment2.params=
-comment2.target=void\ setEndGameState()
+comment2.target=void\ loadPlayScreen()
 comment3.params=
-comment3.target=void\ setPlayGameState()
+comment3.target=void\ loadInitScreen()
 comment4.params=
-comment4.target=void\ setLevelUpState()
+comment4.target=void\ initScreen()
 comment5.params=
-comment5.target=void\ setInitState()
-comment6.params=
-comment6.target=void\ prepare()
-numComments=7
+comment5.target=void\ reinitialize()
+numComments=6

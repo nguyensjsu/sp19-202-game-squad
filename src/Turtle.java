@@ -1,48 +1,134 @@
+import java.util.ArrayList;
+import java.util.List;
 
-import greenfoot.*; 
+import greenfoot.*;
+
 /*
  * Turtle class, singleton
  */
-public class Turtle extends Animal
-{
-    private static Turtle turtle = new Turtle();
-    
-    private Turtle() {}
-    
-    public static Turtle getTurtle() {
-     return turtle;   
+public class Turtle extends Animal implements IEatSubject, IComponent {
+  private static Turtle turtle;
+  private PowerDecorator powerDecorator = null;
+  List<IEatObserver> observers;
+
+  private static Shield shield = new Shield();
+
+  private Turtle() {
+    observers = new ArrayList<>();
+  }
+
+  public void snakeHit() {
+      shield.snakeHit();
+  }
+
+  public static Turtle getTurtle() {
+    if (turtle == null) {
+      return init();
     }
-    
-        public void act()
-    {
-        move(WorldConfig.TURTLE_SPEED);
-        checkKeys();
-        //eat();
+    return turtle;
+  }
+
+  public static Shield getShield() {
+    return shield;
+  }
+
+  public static Turtle init() {
+    turtle = new Turtle();
+    return turtle;
+  }
+
+  public void act() {
+      moveactor();
+      shield.moveactor();
+  }
+  
+  public void moveactor() {
+    move(WorldConfig.TURTLE_SPEED);
+    checkKeys();
+    if (canSee(Lettuce.class)) {
+      eat(Lettuce.class);
+    } else if (canSee(RedLettuce.class)) {
+      eat(RedLettuce.class);
+    } else if (canSee(Bug.class)) {
+      eat(Bug.class);
+    }
+  }
+
+  public void checkKeys() {
+    if (Greenfoot.isKeyDown("Left")) {
+      keyLeftAction();
     }
 
-    public void checkKeys()
-    {
-        if (Greenfoot.isKeyDown("Left"))
-        {
-            turn(-WorldConfig.TURTLE_DEGREE);
-        }
-
-        if (Greenfoot.isKeyDown("Right"))
-        {
-            turn(WorldConfig.TURTLE_DEGREE);
-        }
-
-        if (Greenfoot.isKeyDown("Up"))
-        {
-            move(WorldConfig.TURTLE_SPEED);
-        }
-
-        if (Greenfoot.isKeyDown("Down"))
-        {
-            move(-WorldConfig.TURTLE_SPEED);
-        }
+    if (Greenfoot.isKeyDown("Right")) {
+      keyRightAction();
     }
-    
+
+    if (Greenfoot.isKeyDown("Up")) {
+      keyUpAction();
+    }
+
+    if (Greenfoot.isKeyDown("Down")) {
+      keyDownAction();
+    }
+  }
+
+  public void keyLeftAction() {
+    turn(-WorldConfig.TURTLE_DEGREE);
+  }
+
+  public void keyRightAction() {
+    turn(WorldConfig.TURTLE_DEGREE);
+  }
+
+  public void keyUpAction() {
+    move(WorldConfig.TURTLE_SPEED);
+  }
+
+  public void keyDownAction() {
+    move(-WorldConfig.TURTLE_SPEED);
+  }
+
+  public void keySpaceAction() {
+    if (this.powerDecorator != null) {
+      this.powerDecorator.keySpaceAction();
+    }
+  }
+
+  public void setDecorator(PowerDecorator powerDecorator) {
+    this.powerDecorator = powerDecorator;
+  }
+
+  public void removeDecorator() {
+    this.powerDecorator = null;
+  }
+
+  public void eat(Class clss) {
+    Actor actor = getOneObjectAtOffset(0, 0, clss);
+    Greenfoot.playSound("slurp.wav");
+
+    if (actor != null) {
+      String className = actor.getClass().getName();
+      getWorld().removeObject(actor);
+      notifyObservers(className);
+    }
+  }
+
+  public void attach(IEatObserver obj) {
+    observers.add(obj);
+  }
+
+  public void removeObserver(IEatObserver obj) {
+    int i = observers.indexOf(obj);
+    if (i >= 0)
+      observers.remove(i);
+  }
+
+  public void notifyObservers(String className) {
+    for (int i = 0; i < observers.size(); i++) {
+      IEatObserver observer = observers.get(i);
+      observer.invoke(className);
+    }
+  }
     /*
     private int points;
     private Counter counter;

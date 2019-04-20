@@ -1,80 +1,99 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.ArrayList;
+import java.util.List;
+
+import greenfoot.*;
+
+public class Counter extends Actor implements IEatObserver, IScoreSubject {
+  private static final Color transparent = new Color(0, 0, 0, 0);
+  private GreenfootImage background;
+  private int value;
+
+  List<IScoreObserver> observers;
 
 
-/**
- * A simple counter with graphical representation as an actor on screen.
- * 
- * @author: Marianne Paulson based on watching this video series: https://blogs.kcl.ac.uk/proged/2012/01/14/joc-9/
- * @version: 1
- */
-public class Counter extends Actor
-{
-    private static final Color transparent = new Color(0,0,0,0);
-    private GreenfootImage background;
-    private int value;
-    private int target;
+  /**
+   * Create a new counter, initialised to 0.
+   */
+  public Counter() {
+    observers = new ArrayList<>();
+    background = getImage();  // get image from class
+    value = 0;
+    System.out.println("this counter:" + this.toString());
+    updateImage();
+  }
 
-    /**
-     * Create a new counter, initialised to 0.
-     */
-    public Counter()
-    {
-        background = getImage();  // get image from class
-        value = 0;
-        target = 0;
-        updateImage();
+  /**
+   * Animate the display to count up (or down) to the current target value.
+   */
+  public void act() {
+
+  }
+
+  /**
+   * Add a new score to the current counter value.
+   */
+  public void add(int score) {
+    setValue(score + getValue());
+  }
+
+  /**
+   * Return the current counter value.
+   */
+  public int getValue() {
+    return value;
+  }
+
+  /**
+   * Set a new counter value.
+   */
+  public void setValue(int newValue) {
+    value = newValue;
+    updateImage();
+  }
+
+  /**
+   * Update the image on screen to show the current value.
+   */
+  private void updateImage() {
+    GreenfootImage image = new GreenfootImage(background);
+    GreenfootImage text = new GreenfootImage("" + value, 22, Color.BLACK,
+      transparent);
+    image.drawImage(text, (image.getWidth() - text.getWidth()) / 2,
+      (image.getHeight() - text.getHeight()) / 2);
+    this.setImage(image);
+  }
+
+  @Override
+  public void invoke(String clss) {
+
+    if (clss.equals(Lettuce.class.getName())) {
+      add(5);
     }
-    
-    /**
-     * Animate the display to count up (or down) to the current target value.
-     */
-    public void act() 
-    {
-        if (value < target) {
-            value++;
-            updateImage();
-        }
-        else if (value > target) {
-            value--;
-            updateImage();
-        }
-    }
 
-    /**
-     * Add a new score to the current counter value.
-     */
-    public void add(int score)
-    {
-        target += score;
+    if (clss.equals(Bug.class.getName())) {
+      add(20);
     }
+    System.out.println("score increased:" + value + " by counter:" + this.toString());
+    notifyObservers();
+  }
 
-    /**
-     * Return the current counter value.
-     */
-    public int getValue()
-    {
-        return value;
-    }
+  @Override
+  public void attach(IScoreObserver obj) {
+    observers.add(obj);
+  }
 
-    /**
-     * Set a new counter value.
-     */
-    public void setValue(int newValue)
-    {
-        target = newValue;
-        value = newValue;
-        updateImage();
-    }
+  @Override
+  public void removeObserver(IScoreObserver obj) {
+    int i = observers.indexOf(obj);
+    if (i >= 0)
+      observers.remove(i);
+  }
 
-    /**
-     * Update the image on screen to show the current value.
-     */
-    private void updateImage()
-    {
-        GreenfootImage image = new GreenfootImage(background);
-        GreenfootImage text = new GreenfootImage("" + value, 22, Color.BLACK, transparent);
-        image.drawImage(text, (image.getWidth()-text.getWidth())/2, 
-                        (image.getHeight()-text.getHeight())/2);
-        setImage(image);
+  @Override
+  public void notifyObservers() {
+    for (int i = 0; i < observers.size(); i++) {
+      IScoreObserver observer = observers.get(i);
+      observer.scoreAction(value);
     }
+  }
 }

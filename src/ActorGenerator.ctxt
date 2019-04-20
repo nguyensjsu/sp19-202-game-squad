@@ -4,6 +4,7 @@ comment1.params=type\ x\ y
 comment1.target=greenfoot.Actor\ createActor(java.lang.String,\ int,\ int)
 comment2.params=x\ y
 comment2.target=greenfoot.Actor\ createSnake(int,\ int)
+comment2.text=\n\ on\ turtle\ eat\ ->\n\ kill\ manager\ will\ observe\ to\ kill\ the\ actor\n\ counter\ will\ observe\ to\ increase\ score\n\ actor\ manager\ will\ observe\ to\ create\ actors\n
 comment3.params=x\ y
 comment3.target=greenfoot.Actor\ createLettuce(int,\ int)
 comment4.params=x\ y
