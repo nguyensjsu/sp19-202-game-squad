@@ -2,4 +2,8 @@
 comment0.target=Helper
 comment1.params=actor\ x\ y
 comment1.target=void\ createActor(greenfoot.Actor,\ int,\ int)
-numComments=2
+comment2.params=text\ world
+comment2.target=void\ loadEndScreen(java.lang.String,\ greenfoot.World)
+comment3.params=world
+comment3.target=void\ deleteAll(greenfoot.World)
+numComments=4

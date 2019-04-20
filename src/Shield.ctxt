@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Shield
-comment0.text=\n\ Write\ a\ description\ of\ class\ Shield\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=p
 comment1.target=Shield(int)
 comment2.params=
@@ -8,7 +7,7 @@ comment2.target=Shield()
 comment3.params=
 comment3.target=void\ snakeHit()
 comment4.params=power
-comment4.target=void\ setImage(int)
+comment4.target=void\ setImagePower(int)
 comment5.params=
 comment5.target=void\ act()
 comment6.params=

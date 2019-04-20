@@ -1,11 +1,5 @@
 import greenfoot.*;
 
-/**
- * Write a description of class Shield here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class Shield extends Animal implements IComponent {
   public int power;
   public boolean hitFlag;
@@ -13,19 +7,22 @@ public class Shield extends Animal implements IComponent {
   public Shield(int p) {
     power = p;
     hitFlag = false;
+    setImage("shield5.png");
   }
 
   public Shield() {
     power = 5;
     hitFlag = false;
+    setImage("shield5.png");
+    System.out.println("shield:" + power);
   }
 
   public void snakeHit() {
     power--;
-    this.setImage(power);
+    this.setImagePower(power);
   }
 
-  public void setImage(int power) {
+  public void setImagePower(int power) {
     switch (power) {
     case 1:
       setImage("shield1.png");
@@ -56,7 +53,11 @@ public class Shield extends Animal implements IComponent {
   public void moveactor() {
     move(WorldConfig.TURTLE_SPEED);
     checkKeys();
+    Turtle t = Turtle.getTurtle();
+    setLocation(t.getX(), t.getY());
+    setRotation(t.getRotation());
     if (canSee(Snake.class) && hitFlag == false) {
+        System.out.println("hit");
       hitFlag = true;
       snakeHit();
     }

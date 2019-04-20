@@ -35,8 +35,10 @@ public class Snake extends Animal {
    */
   public void eatTurtle() {
     if (canSee(Turtle.class) && (Turtle.getShield().power == 1)) {
+        World world = Turtle.getTurtle().getWorld();
       eat(Turtle.class);
       eat(Shield.class);
+      Helper.loadEndScreen("Looser", world); 
       Greenfoot.playSound("gameover.wav");
       Greenfoot.stop();
     }
