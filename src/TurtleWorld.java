@@ -5,7 +5,7 @@ public class TurtleWorld extends World {
   public TurtleWorld() {
     super(WorldConfig.getX(), WorldConfig.getY(), WorldConfig.getCellSize());
     System.out.println("construc call");
-    loadPlayScreen();
+    reinitialize();
   }
 
   public void loadEndScreen(String text) {
@@ -14,7 +14,7 @@ public class TurtleWorld extends World {
   }
 
   public void endScreen(String text) {
-    showText(text,500,300);
+    showText(text,400,300);
   }
 
   public void loadPlayScreen() {
