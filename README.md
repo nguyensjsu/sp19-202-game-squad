@@ -18,7 +18,7 @@ Game Squad
 * [Saumil N Patel](https://github.com/xxx/cmpe202)
 * [Anjali Deshmukh](https://github.com/xxx/cmpe202)
 * [Megha Lnu](https://github.com/xxx/cmpe202)
-* [Chirag Arora](https://github.com/chiragarora17/cmpe202)
+* [Chirag Arora](https://github.com/chiragarora1703/cmpe202)
 
 ## Project Name
 
