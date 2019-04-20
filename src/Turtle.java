@@ -34,6 +34,7 @@ public class Turtle extends Animal implements IEatSubject, IComponent {
 
   public static Turtle init() {
     turtle = new Turtle();
+    turtle.shield = new Shield();
     return turtle;
   }
 
