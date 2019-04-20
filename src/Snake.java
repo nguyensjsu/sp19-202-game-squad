@@ -34,8 +34,11 @@ public class Snake extends Animal {
    * Check if lettuce there and then eat
    */
   public void eatTurtle() {
-    if (canSee(Turtle.class)) {
+    if (canSee(Turtle.class) && (Turtle.getShield().power == 1)) {
+        World world = Turtle.getTurtle().getWorld();
       eat(Turtle.class);
+      eat(Shield.class);
+      Helper.loadEndScreen("Looser", world); 
       Greenfoot.playSound("gameover.wav");
       Greenfoot.stop();
     }

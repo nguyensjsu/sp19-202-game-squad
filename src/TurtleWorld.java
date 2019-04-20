@@ -1,29 +1,20 @@
 import greenfoot.*;
 
 public class TurtleWorld extends World {
-
+    
   public TurtleWorld() {
     super(WorldConfig.getX(), WorldConfig.getY(), WorldConfig.getCellSize());
     System.out.println("construc call");
     reinitialize();
   }
 
-  public void loadEndScreen(String text) {
-    deleteAll();
-    endScreen(text);
-  }
-
-  public void endScreen(String text) {
-    showText(text,400,300);
-  }
-
   public void loadPlayScreen() {
-    deleteAll();
+    Helper.deleteAll(this);
     reinitialize();
   }
 
   public void loadInitScreen() {
-    deleteAll();
+    Helper.deleteAll(this);
     initScreen();
   }
 
@@ -43,6 +34,8 @@ public class TurtleWorld extends World {
     counter.attach(scoreManager);
     // counter.attach(director) this was to level up
     Turtle turtle = Turtle.init();
+    Shield shield = Turtle.getShield();
+    addObject(shield,100,100);
     addObject(turtle, 100, 100);
     turtle.attach(new RedLettuceObserver());
     turtle.attach(counter);
@@ -53,9 +46,7 @@ public class TurtleWorld extends World {
   }
 
 
-  private void deleteAll() {
-    removeObjects(getObjects(null));
-  }
+
 
 
 

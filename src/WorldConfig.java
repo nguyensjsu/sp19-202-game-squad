@@ -13,7 +13,7 @@ public class WorldConfig {
 
 
   public static int NUM_OF_LETTUCE = 10;
-  public static int RED_LETTUCE_CREATION_ON_SCORE = 10;
+  public static int RED_LETTUCE_CREATION_ON_SCORE = 20;
   public static int NUM_OF_RED_LETTUCE = 1;
   public static int LETTUCE_CREATION_DELAY = 30;
 
