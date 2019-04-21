@@ -88,43 +88,47 @@ public class ActorManager implements IEatObserver {
     public void createRedLettuce() {
         // only at multiple of 100 it should be created.
         // wait for 1 minute after that remove it.
-        World world = Turtle.getTurtle().getWorld();
-        List<RedLettuce> redLettucs = world.getObjects(RedLettuce.class);
+        if (Turtle.getTurtle() != null && Turtle.getTurtle().getWorld() != null) {
+            World world = Turtle.getTurtle().getWorld();
+            List<RedLettuce> redLettucs = world.getObjects(RedLettuce.class);
 
-        if (redLettucs.isEmpty()) {
-            System.out.println("creating red lettuce");
+            if (redLettucs.isEmpty()) {
+                System.out.println("creating red lettuce");
 
-            int worldWidth = world.getWidth();
-            int worldHeight = world.getHeight();
+                int worldWidth = world.getWidth();
+                int worldHeight = world.getHeight();
 
-            int x = Greenfoot.getRandomNumber(worldWidth);
-            int y = Greenfoot.getRandomNumber(worldHeight);
-            Actor lettuce = factory.createActor(RedLettuce.class.getName(), x, y);
+                int x = Greenfoot.getRandomNumber(worldWidth);
+                int y = Greenfoot.getRandomNumber(worldHeight);
+                Actor lettuce = factory.createActor(RedLettuce.class.getName(), x, y);
 
-            String className = RedLettuce.class.getName();
-            if (!threadQueued.contains(className)) {
-                threadQueued.add(className);
-                System.out.println("Red Lettuce scheduled:" + className);
-                Thread thread = new Thread(() -> {
-                            world.removeObject(lettuce);
-                            threadQueued.remove(className);
-                        });
-                executor.schedule(thread, 60, TimeUnit.SECONDS);
+                String className = RedLettuce.class.getName();
+                if (!threadQueued.contains(className)) {
+                    threadQueued.add(className);
+                    System.out.println("Red Lettuce scheduled:" + className);
+                    Thread thread = new Thread(() -> {
+                                world.removeObject(lettuce);
+                                threadQueued.remove(className);
+                            });
+                    executor.schedule(thread, 60, TimeUnit.SECONDS);
+                }
             }
         }
     }
 
     public void createBug() {
         // FIXME world check npe
-        World world = Turtle.getTurtle().getWorld();
-        List<Bug> bugs = world.getObjects(Bug.class);
-        int worldWidth = world.getWidth();
-        int worldHeight = world.getHeight();
+        if (Turtle.getTurtle() != null && Turtle.getTurtle().getWorld() != null) {
+            World world = Turtle.getTurtle().getWorld();
+            List<Bug> bugs = world.getObjects(Bug.class);
+            int worldWidth = world.getWidth();
+            int worldHeight = world.getHeight();
 
-        if (bugs.isEmpty()) {
-            int x = Greenfoot.getRandomNumber(worldWidth);
-            int y = Greenfoot.getRandomNumber(worldHeight);
-            factory.createActor(Bug.class.getName(), x, y);
+            if (bugs.isEmpty()) {
+                int x = Greenfoot.getRandomNumber(worldWidth);
+                int y = Greenfoot.getRandomNumber(worldHeight);
+                factory.createActor(Bug.class.getName(), x, y);
+            }
         }
     }
 
