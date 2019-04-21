@@ -20,7 +20,7 @@ public class Snake extends Animal {
 
       Turtle turtle = turtles.get(0);
       this.turnTowards(turtle.getX(), turtle.getY());
-      move(0);
+      move(1);
     } else {
       move(WorldConfig.SPEED_OF_SNAKES);
       this.setImage("snake2.png");
