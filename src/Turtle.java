@@ -7,192 +7,195 @@ import greenfoot.*;
  * Turtle class, singleton
  */
 public class Turtle extends Animal implements IEatSubject, IComponent {
-  private static Turtle turtle;
-  private PowerDecorator powerDecorator = null;
-  List<IEatObserver> observers;
+    private static Turtle turtle;
+    private PowerDecorator powerDecorator = null;
+    List<IEatObserver> observers;
 
-  private static Shield shield = new Shield();
+    private static Shield shield = new Shield();
 
-  private Turtle() {
-    observers = new ArrayList<>();
-  }
-
-  public void snakeHit() {
-      shield.snakeHit();
-  }
-
-  public static Turtle getTurtle() {
-    if (turtle == null) {
-      return init();
-    }
-    return turtle;
-  }
-
-  public static Shield getShield() {
-    return shield;
-  }
-
-  public static Turtle init() {
-    turtle = new Turtle();
-    return turtle;
-  }
-
-  public void act() {
-      moveactor();
-      shield.moveactor();
-  }
-  
-  public void moveactor() {
-    move(WorldConfig.TURTLE_SPEED);
-    checkKeys();
-    if (canSee(Lettuce.class)) {
-      eat(Lettuce.class);
-    } else if (canSee(RedLettuce.class)) {
-      eat(RedLettuce.class);
-    } else if (canSee(Bug.class)) {
-      eat(Bug.class);
-    }
-  }
-
-  public void checkKeys() {
-    if (Greenfoot.isKeyDown("Left")) {
-      keyLeftAction();
+    private Turtle() {
+        observers = new ArrayList<>();
     }
 
-    if (Greenfoot.isKeyDown("Right")) {
-      keyRightAction();
+    public static void die() {
+        turtle = null;
     }
 
-    if (Greenfoot.isKeyDown("Up")) {
-      keyUpAction();
+    public void snakeHit() {
+        shield.snakeHit();
     }
 
-    if (Greenfoot.isKeyDown("Down")) {
-      keyDownAction();
+    public static Turtle getTurtle() {
+        if (turtle == null) {
+            return init();
+        }
+        return turtle;
     }
-  }
 
-  public void keyLeftAction() {
-    turn(-WorldConfig.TURTLE_DEGREE);
-  }
-
-  public void keyRightAction() {
-    turn(WorldConfig.TURTLE_DEGREE);
-  }
-
-  public void keyUpAction() {
-    move(WorldConfig.TURTLE_SPEED);
-  }
-
-  public void keyDownAction() {
-    move(-WorldConfig.TURTLE_SPEED);
-  }
-
-  public void keySpaceAction() {
-    if (this.powerDecorator != null) {
-      this.powerDecorator.keySpaceAction();
+    public static Shield getShield() {
+        return shield;
     }
-  }
 
-  public void setDecorator(PowerDecorator powerDecorator) {
-    this.powerDecorator = powerDecorator;
-  }
-
-  public void removeDecorator() {
-    this.powerDecorator = null;
-  }
-
-  public void eat(Class clss) {
-    Actor actor = getOneObjectAtOffset(0, 0, clss);
-    Greenfoot.playSound("slurp.wav");
-
-    if (actor != null) {
-      String className = actor.getClass().getName();
-      getWorld().removeObject(actor);
-      notifyObservers(className);
+    public static Turtle init() {
+        turtle = new Turtle();
+        return turtle;
     }
-  }
 
-  public void attach(IEatObserver obj) {
-    observers.add(obj);
-  }
-
-  public void removeObserver(IEatObserver obj) {
-    int i = observers.indexOf(obj);
-    if (i >= 0)
-      observers.remove(i);
-  }
-
-  public void notifyObservers(String className) {
-    for (int i = 0; i < observers.size(); i++) {
-      IEatObserver observer = observers.get(i);
-      observer.invoke(className);
+    public void act() {
+        if (turtle != null) {
+            moveactor();
+            shield.moveactor();
+        }
     }
-  }
+
+    public void moveactor() {
+        move(WorldConfig.TURTLE_SPEED);
+        checkKeys();
+        if (canSee(Lettuce.class)) {
+            eat(Lettuce.class);
+        } else if (canSee(RedLettuce.class)) {
+            eat(RedLettuce.class);
+        } else if (canSee(Bug.class)) {
+            eat(Bug.class);
+        }
+    }
+
+    public void checkKeys() {
+        if (Greenfoot.isKeyDown("Left")) {
+            keyLeftAction();
+        }
+
+        if (Greenfoot.isKeyDown("Right")) {
+            keyRightAction();
+        }
+
+        if (Greenfoot.isKeyDown("Up")) {
+            keyUpAction();
+        }
+
+        if (Greenfoot.isKeyDown("Down")) {
+            keyDownAction();
+        }
+    }
+
+    public void keyLeftAction() {
+        turn(-WorldConfig.TURTLE_DEGREE);
+    }
+
+    public void keyRightAction() {
+        turn(WorldConfig.TURTLE_DEGREE);
+    }
+
+    public void keyUpAction() {
+        move(WorldConfig.TURTLE_SPEED);
+    }
+
+    public void keyDownAction() {
+        move(-WorldConfig.TURTLE_SPEED);
+    }
+
+    public void keySpaceAction() {
+        if (this.powerDecorator != null) {
+            this.powerDecorator.keySpaceAction();
+        }
+    }
+
+    public void setDecorator(PowerDecorator powerDecorator) {
+        this.powerDecorator = powerDecorator;
+    }
+
+    public void removeDecorator() {
+        this.powerDecorator = null;
+    }
+
+    public void eat(Class clss) {
+        Actor actor = getOneObjectAtOffset(0, 0, clss);
+        Greenfoot.playSound("slurp.wav");
+
+        if (actor != null) {
+            String className = actor.getClass().getName();
+            getWorld().removeObject(actor);
+            notifyObservers(className);
+        }
+    }
+
+    public void attach(IEatObserver obj) {
+        observers.add(obj);
+    }
+
+    public void removeObserver(IEatObserver obj) {
+        int i = observers.indexOf(obj);
+        if (i >= 0)
+            observers.remove(i);
+    }
+
+    public void notifyObservers(String className) {
+        for (int i = 0; i < observers.size(); i++) {
+            IEatObserver observer = observers.get(i);
+            observer.invoke(className);
+        }
+    }
     /*
     private int points;
     private Counter counter;
 
     public Turtle()
     {
-       
+
     }
-    
+
     public Turtle(Counter pointCounter)
     {
-        counter = pointCounter;
+    counter = pointCounter;
     }
 
-
-
-   
     public void eat()
     {
-        if(canSee(Lettuce.class))
-        {
-            eat(Lettuce.class);  
-            //points++;
-            counter.add(5);
-            Greenfoot.playSound("slurp.wav");
-        }
+    if(canSee(Lettuce.class))
+    {
+    eat(Lettuce.class);  
+    //points++;
+    counter.add(5);
+    Greenfoot.playSound("slurp.wav");
+    }
 
-        if(canSee(Bug.class))
-        {
-            eat(Bug.class);  
-            //points = points + 5;
-            counter.add(20);
-            Greenfoot.playSound("slurp.wav");
-            createNewBug();
-        }
+    if(canSee(Bug.class))
+    {
+    eat(Bug.class);  
+    //points = points + 5;
+    counter.add(20);
+    Greenfoot.playSound("slurp.wav");
+    createNewBug();
+    }
 
-        if (counter.getValue() >= 80) 
-        {
-            gameOver();
-        }
+    if (counter.getValue() >= 80) 
+    {
+    gameOver();
+    }
     }
 
     private void createNewBug()
     {
-        Bug newBug;
+    Bug newBug;
 
-        newBug = new Bug();
+    newBug = new Bug();
 
-        World world;
-        world = getWorld();
+    World world;
+    world = getWorld();
 
-        int worldWidth = world.getWidth();
-        int worldHeight = world.getHeight();
+    int worldWidth = world.getWidth();
+    int worldHeight = world.getHeight();
 
-        int x = Greenfoot.getRandomNumber(worldWidth);
-        int y = Greenfoot.getRandomNumber(worldHeight);
+    int x = Greenfoot.getRandomNumber(worldWidth);
+    int y = Greenfoot.getRandomNumber(worldHeight);
 
-        world.addObject(newBug, x, y);
+    world.addObject(newBug, x, y);
     }
 
     public void gameOver()
     {
-        Greenfoot.playSound("fanfare.aiff");
-        Greenfoot.stop();
+    Greenfoot.playSound("fanfare.aiff");
+    Greenfoot.stop();
     }
-    */
+     */
 }
