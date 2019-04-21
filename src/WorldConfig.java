@@ -10,7 +10,7 @@ public class WorldConfig {
   private static int cellSize = 1;
   public static int TURTLE_SPEED = 2;
   public static int TURTLE_DEGREE = 3;
-
+  public static int SHOTS = 10;
 
   public static int NUM_OF_LETTUCE = 10;
   public static int RED_LETTUCE_CREATION_ON_SCORE = 20;

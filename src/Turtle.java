@@ -8,7 +8,7 @@ import greenfoot.*;
  */
 public class Turtle extends Animal implements IEatSubject, IComponent {
   private static Turtle turtle;
-  private PowerDecorator powerDecorator = null;
+  
   List<IEatObserver> observers;
 
   private static Shield shield = new Shield();
@@ -86,20 +86,6 @@ public class Turtle extends Animal implements IEatSubject, IComponent {
 
   public void keyDownAction() {
     move(-WorldConfig.TURTLE_SPEED);
-  }
-
-  public void keySpaceAction() {
-    if (this.powerDecorator != null) {
-      this.powerDecorator.keySpaceAction();
-    }
-  }
-
-  public void setDecorator(PowerDecorator powerDecorator) {
-    this.powerDecorator = powerDecorator;
-  }
-
-  public void removeDecorator() {
-    this.powerDecorator = null;
   }
 
   public void eat(Class clss) {
