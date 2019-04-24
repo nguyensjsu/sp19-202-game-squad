@@ -16,7 +16,7 @@ public class Counter extends Actor implements IEatObserver, IScoreSubject {
    */
   public Counter() {
     observers = new ArrayList<>();
-    background = getImage();  // get image from class
+    background = new GreenfootImage("counter.png");  // get image from class
     value = 0;
     System.out.println("this counter:" + this.toString());
     updateImage();

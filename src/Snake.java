@@ -3,6 +3,12 @@ import java.util.List;
 import greenfoot.*;
 
 public class Snake extends Animal {
+    public Snake() {
+        
+        setImage("snake2.png");
+        
+    }
+    
     /**
      * Act - do whatever the Snake wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

@@ -14,6 +14,7 @@ public class Turtle extends Animal implements IEatSubject, IComponent {
     private static Shield shield;
 
     private Turtle() {
+         setImage("turtle.png");
         observers = new ArrayList<>();
     }
 
@@ -62,21 +63,23 @@ public class Turtle extends Animal implements IEatSubject, IComponent {
     }
 
     public void checkKeys() {
-        if (Greenfoot.isKeyDown("Left")) {
-            keyLeftAction();
+        if (Greenfoot.mousePressed(null)) {
+            MouseInfo mouse = Greenfoot.getMouseInfo();
+            int mouseX = mouse.getX();
+            int mouseY = mouse.getY();
+            int myY = this.getY();
+            int myX = this.getX();
+            if (mouseX < myX) {
+                turn(-WorldConfig.TURTLE_DEGREE);
+            }else if (mouseX > myX) {
+                turn(WorldConfig.TURTLE_DEGREE);
+            }else if (mouseY < myY) {
+                move(WorldConfig.TURTLE_SPEED);
+            }else if (mouseY > myY) {
+                move(-WorldConfig.TURTLE_SPEED);
+            }
         }
 
-        if (Greenfoot.isKeyDown("Right")) {
-            keyRightAction();
-        }
-
-        if (Greenfoot.isKeyDown("Up")) {
-            keyUpAction();
-        }
-
-        if (Greenfoot.isKeyDown("Down")) {
-            keyDownAction();
-        }
     }
 
     public void keyLeftAction() {

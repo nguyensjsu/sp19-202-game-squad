@@ -11,7 +11,7 @@ public class Level extends Actor implements IScoreObserver
    * Create a new counter, initialised to 0.
    */
   public Level() {
-    background = getImage();  // get image from class
+    background = new GreenfootImage("corkboard.jpg");  // get image from class
     level = 1;
     updateImage();
   }

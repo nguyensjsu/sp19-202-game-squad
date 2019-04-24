@@ -16,6 +16,7 @@ public class Shot extends Actor
      */
     public Shot(int gunShots)
     {
+        setImage("beeper.png");
        this.gunShots = gunShots;
     }
     

@@ -5,6 +5,7 @@ public class TurtleWorld extends World {
     public TurtleWorld() {
         super(WorldConfig.getX(), WorldConfig.getY(), WorldConfig.getCellSize());
         System.out.println("construc call");
+        setBackground("bricks1.jpg");
         reinitialize();
     }
 

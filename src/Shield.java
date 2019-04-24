@@ -1,10 +1,9 @@
 import greenfoot.*;
 
 public class Shield extends Animal implements IComponent, IShield {
-  public int power;
-  public boolean hitFlag;
-  private IShield shieldBooster = null;
-
+    public int power;
+    public boolean hitFlag;
+    private IShield shieldBooster = null;
 
     public Shield(int p) {
         power = p;
@@ -76,38 +75,38 @@ public class Shield extends Animal implements IComponent, IShield {
     }
 
     public void checkKeys() {
-        if (Greenfoot.isKeyDown("Left")) {
-            turn(-WorldConfig.TURTLE_DEGREE);
+        if (Greenfoot.mousePressed(this))
+        {
+           attack();
+        } else if (Greenfoot.mousePressed(null)) {
+            MouseInfo mouse = Greenfoot.getMouseInfo();
+            int mouseX = mouse.getX();
+            int mouseY = mouse.getY();
+            int myY = this.getY();
+            int myX = this.getX();
+            if (mouseX < myX) {
+                turn(-WorldConfig.TURTLE_DEGREE);
+            }else if (mouseX > myX) {
+                turn(WorldConfig.TURTLE_DEGREE);
+            }else if (mouseY < myY) {
+                move(WorldConfig.TURTLE_SPEED);
+            }else if (mouseY > myY) {
+                move(-WorldConfig.TURTLE_SPEED);
+            }
         }
 
-        if (Greenfoot.isKeyDown("Right")) {
-            turn(WorldConfig.TURTLE_DEGREE);
-        }
-
-        if (Greenfoot.isKeyDown("Up")) {
-            move(WorldConfig.TURTLE_SPEED);
-        }
-
-        if (Greenfoot.isKeyDown("Down")) {
-            move(-WorldConfig.TURTLE_SPEED);
-        }
-    
-    if ("space".equals(Greenfoot.getKey()))
-    {
-        attack();
     }
-  }
-  
-   public void setDecorator(IShield shieldBooster) {
+
+    public void setDecorator(IShield shieldBooster) {
         System.out.println("In booster decorator");
         this.shieldBooster = shieldBooster;
     }
 
-     public void removeDecorator() {
+    public void removeDecorator() {
         this.shieldBooster = null;
     }
 
-     public void attack() {
+    public void attack() {
         if (this.shieldBooster != null)
             shieldBooster.attack();
     }
