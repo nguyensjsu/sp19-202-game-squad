@@ -95,22 +95,16 @@ public class Turtle extends Animal implements IEatSubject, IComponent {
         move(-WorldConfig.TURTLE_SPEED);
     }
 
-    public void keySpaceAction() {
-        if (this.powerDecorator != null) {
-            this.powerDecorator.keySpaceAction();
+    public void eat(Class clss) {
+        Actor actor = getOneObjectAtOffset(0, 0, clss);
+        Greenfoot.playSound("slurp.wav");
+
+        if (actor != null) {
+            String className = actor.getClass().getName();
+            getWorld().removeObject(actor);
+            notifyObservers(className);
         }
     }
-
-  public void eat(Class clss) {
-    Actor actor = getOneObjectAtOffset(0, 0, clss);
-    Greenfoot.playSound("slurp.wav");
-
-    if (actor != null) {
-      String className = actor.getClass().getName();
-      getWorld().removeObject(actor);
-      notifyObservers(className);
-    }
- }
 
     public void attach(IEatObserver obj) {
         observers.add(obj);

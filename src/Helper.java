@@ -22,6 +22,5 @@ public class Helper {
     world.removeObjects(world.getObjects(Lettuce.class));
     world.removeObjects(world.getObjects(RedLettuce.class));
     world.removeObjects(world.getObjects(Shot.class));
-    world.removeObjects(world.getObjects(Gun.class));
   }
 }
