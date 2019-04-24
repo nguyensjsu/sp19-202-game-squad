@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ShieldDecorator
+comment1.params=shield
+comment1.target=ShieldDecorator(IShield)
+comment2.params=
+comment2.target=void\ attack()
+numComments=3

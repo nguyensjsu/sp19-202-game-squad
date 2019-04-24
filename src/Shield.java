@@ -1,8 +1,10 @@
 import greenfoot.*;
 
-public class Shield extends Animal implements IComponent {
-    public int power;
-    public boolean hitFlag;
+public class Shield extends Animal implements IComponent, IShield {
+  public int power;
+  public boolean hitFlag;
+  private IShield shieldBooster = null;
+
 
     public Shield(int p) {
         power = p;
@@ -89,6 +91,25 @@ public class Shield extends Animal implements IComponent {
         if (Greenfoot.isKeyDown("Down")) {
             move(-WorldConfig.TURTLE_SPEED);
         }
+    
+    if ("space".equals(Greenfoot.getKey()))
+    {
+        attack();
+    }
+  }
+  
+   public void setDecorator(IShield shieldBooster) {
+        System.out.println("In booster decorator");
+        this.shieldBooster = shieldBooster;
+    }
+
+     public void removeDecorator() {
+        this.shieldBooster = null;
+    }
+
+     public void attack() {
+        if (this.shieldBooster != null)
+            shieldBooster.attack();
     }
 
 }

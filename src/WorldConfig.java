@@ -10,6 +10,7 @@ public class WorldConfig {
     private static int cellSize = 1;
     public static int TURTLE_SPEED = 2;
     public static int TURTLE_DEGREE = 3;
+    public static int SHOTS = 10;
 
     public static int MAX_LEVEL=3;
     public static int LEVEL_FACTOR=20;
