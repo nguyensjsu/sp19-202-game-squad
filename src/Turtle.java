@@ -11,7 +11,7 @@ public class Turtle extends Animal implements IEatSubject, IComponent {
     private PowerDecorator powerDecorator = null;
     List<IEatObserver> observers;
 
-    private static Shield shield = new Shield();
+    private static Shield shield;
 
     private Turtle() {
         observers = new ArrayList<>();
@@ -38,6 +38,7 @@ public class Turtle extends Animal implements IEatSubject, IComponent {
 
     public static Turtle init() {
         turtle = new Turtle();
+        turtle.shield = new Shield();
         return turtle;
     }
 
