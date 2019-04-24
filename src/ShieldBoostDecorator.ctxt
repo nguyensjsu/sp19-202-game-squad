@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ShieldBoostDecorator
+comment1.params=shield
+comment1.target=ShieldBoostDecorator(IShield)
+comment2.params=obj
+comment2.target=void\ attach(IShotObserver)
+comment3.params=
+comment3.target=void\ removeObserver()
+comment4.params=
+comment4.target=void\ notifyObserver()
+comment5.params=
+comment5.target=void\ attack()
+numComments=6
