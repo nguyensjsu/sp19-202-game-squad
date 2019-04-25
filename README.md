@@ -36,23 +36,29 @@ We will then refactor the code by using patterns and expand upon the features wi
 
 ## Project Progress
 
-First week was basically research and decide upon project.
-We also divided up the XP values as follows:
+Every week we are improving as a team. We are trying hard to follow the values of XP.
+Each of us is responsible for one value each as shown below.
+
 Megha: Simplicity
 Anjali: Communication
 Saumil: Feedback
 Marianne: Courage
 Chirag: Respect
 
-Second week we all worked on wireframes and dividing up the stories.
-We also, decided who was going to refactor the game using patterns along with 
-the stories we got assigned.
+We have found that following these values, make us work better together as a team.
 
-Once we got the stories divided, we all started to mock up screens,
-draw uml diagrams, and code based on patterns and discussions.
+As we are approaching end of week 3, we have now completed completed wireframing, diagramming, coding, testing, and integration of 9 out of 10 user stories.
 
-We are now in our 3rd week and we are finetuning our stories, mockups, and uml diagrams.
-We have also started on wow factor.
+We are optimistic that we will finish all 10 stories by end of this week.
+
+We have also managed to port our Turtleworld game to an Android phone. We are working 
+on completing this by mid next week.
+
+Finally, we have started working on the ad for our TurtleWorld Game.
+
+### Draft ad
+
+https://biteable.com/watch/mobile-app-ad-copy-2241439
 
 ### Mockups
 
