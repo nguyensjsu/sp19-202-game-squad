@@ -41,7 +41,7 @@ public class ActorManager implements IEatObserver {
             int worldWidth = world.getWidth();
             int worldHeight = world.getHeight();
 
-            int remaining = WorldConfig.NUM_OF_LETTUCE - existing;
+            int remaining = WorldConfig.getInstance().NUM_OF_LETTUCE - existing;
 
             int i = 0;
             while (0 < remaining) {
@@ -68,7 +68,7 @@ public class ActorManager implements IEatObserver {
             int worldWidth = world.getWidth();
             int worldHeight = world.getHeight();
 
-            int remaining = WorldConfig.NUM_OF_SNAKES - existing;
+            int remaining = WorldConfig.getInstance().NUM_OF_SNAKES - existing;
 
             int i = 0;
             while (0 < remaining) {
@@ -139,11 +139,11 @@ public class ActorManager implements IEatObserver {
     @Override
     public void invoke(String clss) {
         if (clss.equals(Lettuce.class.getName())) {
-            queue(clss, () -> createLettuce(), WorldConfig.LETTUCE_CREATION_DELAY);
+            queue(clss, () -> createLettuce(), WorldConfig.getInstance().LETTUCE_CREATION_DELAY);
         }
 
         if (clss.equals(Bug.class.getName())) {
-            queue(clss, () -> createBug(), WorldConfig.BUG_CREATION_DELAY);
+            queue(clss, () -> createBug(), WorldConfig.getInstance().BUG_CREATION_DELAY);
         }
 
         //if (clss.equals(Snake.class.getName())) {

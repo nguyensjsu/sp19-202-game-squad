@@ -14,11 +14,5 @@ public class ChooseDifficulty extends Actor
      */
     public void act() 
     {
-        if(Greenfoot.mouseClicked(this))
-        {
-            WorldConfig.createWorldConfig(new DifficultyLevelMedium());
-            TurtleWorld tWorld = TurtleWorld.getTurtleWorldInstance();
-            tWorld.loadPlayScreen();
-        }
     }    
 }

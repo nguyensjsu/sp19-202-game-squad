@@ -10,11 +10,11 @@ public class Snake extends Animal {
     public void act() {
         List<Snake> snakes = this.getNeighbours(30, false, Snake.class);
         if (!snakes.isEmpty()) {
-            this.turn(WorldConfig.TURTLE_DEGREE);
-            move(WorldConfig.SPEED_OF_SNAKES * 5);
+            this.turn(WorldConfig.getInstance().TURTLE_DEGREE);
+            move(WorldConfig.getInstance().SPEED_OF_SNAKES * 5);
         }
 
-        List<Turtle> turtles = this.getNeighbours(WorldConfig.SNAKES_ATTRACTION, true, Turtle.class);
+        List<Turtle> turtles = this.getNeighbours(WorldConfig.getInstance().SNAKES_ATTRACTION, true, Turtle.class);
         if (!turtles.isEmpty()) {
             this.setImage("snake2_red.png");
 
@@ -22,7 +22,7 @@ public class Snake extends Animal {
             this.turnTowards(turtle.getX(), turtle.getY());
             move(0);
         } else {
-            move(WorldConfig.SPEED_OF_SNAKES);
+            move(WorldConfig.getInstance().SPEED_OF_SNAKES);
             this.setImage("snake2.png");
             randomTurn();
         }

@@ -50,7 +50,7 @@ public class Turtle extends Animal implements IEatSubject, IComponent {
     }
 
     public void moveactor() {
-        move(WorldConfig.TURTLE_SPEED);
+        move(WorldConfig.getInstance().TURTLE_SPEED);
         checkKeys();
         if (canSee(Lettuce.class)) {
             eat(Lettuce.class);
@@ -80,19 +80,19 @@ public class Turtle extends Animal implements IEatSubject, IComponent {
     }
 
     public void keyLeftAction() {
-        turn(-WorldConfig.TURTLE_DEGREE);
+        turn(-WorldConfig.getInstance().TURTLE_DEGREE);
     }
 
     public void keyRightAction() {
-        turn(WorldConfig.TURTLE_DEGREE);
+        turn(WorldConfig.getInstance().TURTLE_DEGREE);
     }
 
     public void keyUpAction() {
-        move(WorldConfig.TURTLE_SPEED);
+        move(WorldConfig.getInstance().TURTLE_SPEED);
     }
 
     public void keyDownAction() {
-        move(-WorldConfig.TURTLE_SPEED);
+        move(-WorldConfig.getInstance().TURTLE_SPEED);
     }
 
     public void eat(Class clss) {

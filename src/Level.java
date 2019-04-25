@@ -30,7 +30,7 @@ public class Level extends Actor implements IScoreObserver
       System.out.println("current level: " + level + " received:"  + ll);
       if (ll > level-1) {
         this.level++;
-        if (this.level >= WorldConfig.MAX_LEVEL) {
+        if (this.level >= WorldConfig.getInstance().MAX_LEVEL) {
             Helper.loadEndScreen("WON", Turtle.getTurtle().getWorld()); 
             Turtle.die();
         }
@@ -52,7 +52,7 @@ public class Level extends Actor implements IScoreObserver
   
   public void scoreAction(int score) {
       System.out.println("scored received in Level:" + score);
-      int ll = score / WorldConfig.LEVEL_FACTOR;
+      int ll = score / WorldConfig.getInstance().LEVEL_FACTOR;
       incrementLevel(ll);
   }
 }
