@@ -39,11 +39,11 @@ We will then refactor the code by using patterns and expand upon the features wi
 Every week we are improving as a team. We are trying hard to follow the values of XP.
 Each of us is responsible for one value each as shown below.
 
-Megha: Simplicity
-Anjali: Communication
-Saumil: Feedback
-Marianne: Courage
-Chirag: Respect
+-   Megha: Simplicity
+-   Anjali: Communication
+-   Saumil: Feedback
+-   Marianne: Courage
+-   Chirag: Respect
 
 We have found that following these values, make us work better together as a team.
 
