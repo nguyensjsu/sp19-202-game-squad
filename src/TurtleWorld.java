@@ -20,7 +20,10 @@ public class TurtleWorld extends World {
 
     private void initScreen() {
         // init function
-
+        addObject(new ChooseDifficulty(), 380, 100);
+        addObject(new DifficultyLow(), 390, 200);
+        addObject(new DifficultyMedium(), 390, 305);
+        addObject(new DifficultyHigh(), 390, 410);
     }
 
     private void reinitialize() {
