@@ -148,7 +148,7 @@ https://balsamiq.cloud/s41ht0j/pcfr87k
 
 ![Alt text](/docs/Wireframes/4_Points.png?raw=true "Story #4")
 
-![Alt text](5_Turtle dies.png?raw=true "Story #5")
+![Alt text](/docs/Wireframes/5_Turtle%20dies.png?raw=true "Story #5")
 
 ![Alt text](6_Advancing to next level.png?raw=true "Story #6")
 
