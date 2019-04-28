@@ -158,7 +158,7 @@ https://balsamiq.cloud/s41ht0j/pcfr87k
 
 ![Alt text](/docs/Wireframes/9_Lady%20Bug%20-%20Story%20%239.png?raw=true "Story #9")
 
-![Alt text](10_Won the game.png?raw=true "Story #10")
+![Alt text](/docs/Wireframes/10_Won%20the%20game.png?raw=true "Story #10")
 
 
 ### Advertising our game
