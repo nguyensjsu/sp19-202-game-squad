@@ -154,7 +154,7 @@ https://balsamiq.cloud/s41ht0j/pcfr87k
 
 ![Alt text](/docs/Wireframes/7_Shield.png?raw=true "Story #7")
 
-![Alt text](8_Shooting power.png?raw=true "Story #8")
+![Alt text](/docs/Uml_diagrams/8_Shooting%20power.png?raw=true "Story #8")
 
 ![Alt text](9_Lady Bug - Story #9.png?raw=true "Story #9")
 
