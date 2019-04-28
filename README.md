@@ -144,15 +144,15 @@ https://balsamiq.cloud/s41ht0j/pcfr87k
 
 ![Alt text](/docs/Wireframes/2_Startup.png?raw=true "Story #2")
 
-![Alt text](3_Snake attracted.png?raw=true "Story #3")
+![Alt text](/docs/Wireframes/3_Snake%20attracted.png?raw=true "Story #3")
 
-![Alt text](4_Points.png?raw=true "Story #4")
+![Alt text](/docs/Wireframes/4_Points.png?raw=true "Story #4")
 
-![Alt text](5_Turtle dies.png?raw=true "Story #5")
+![Alt text](/docs/Wireframes/5_Turtle%20dies.png?raw=true "Story #5")
 
-![Alt text](6_Advancing to next level.png?raw=true "Story #6")
+![Alt text](/docs/Wireframes/6_Advancing%20to%20next%20level.png?raw=true "Story #6")
 
-![Alt text](7_Shield.png?raw=true "Story #7")
+![Alt text](/docs/Wireframes/7_Shield.png?raw=true "Story #7")
 
 ![Alt text](8_Shooting power.png?raw=true "Story #8")
 
