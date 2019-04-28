@@ -7,7 +7,7 @@ Game Squad
 ## Team Members
 
 * [Marianne Paulson](https://github.com/mariannepaulson/cmpe202)
-* [Saumil N Patel](https://github.com/xxx/cmpe202)
+* [Saumil N Patel](https://github.com/saumilnpatel17/cmpe202)
 * [Anjali Deshmukh](https://github.com/Anjali-Deshmukh/cmpe202)
 * [Megha Lnu](https://github.com/megha-31/cmpe202)
 * [Chirag Arora](https://github.com/chiragarora1703/cmpe202)
