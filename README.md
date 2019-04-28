@@ -171,7 +171,7 @@ https://docs.google.com/spreadsheets/d/1mopQ8FHEn-voEusz9E8PlLg993NWcqjp-fM39Le0
 ### Diagrams
 
 ![Alt text](https://github.com/nguyensjsu/sp19-202-game-squad/blob/master/docs/Uml_diagrams/Sequence%20Diagram%20-%20Start%20Game.png?raw=true "Sequence Diagram")
-![Alt text](Class Diagram0.png?raw=true "Class Diagram")
+![Alt text](/docs/Uml_diagrams/Class Diagram0.png?raw=true "Class Diagram")
 ![Alt text](Activity Diagram0.png?raw=true "Activity Diagram")
 ![Alt text](UseCase Diagram0.png?raw=true "UseCase Diagram")
 
