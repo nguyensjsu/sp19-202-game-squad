@@ -140,7 +140,7 @@ https://balsamiq.cloud/s41ht0j/pcfr87k
 
 #### Screenshots of each wireframs
 
-![Alt text](docs/Wireframes/1_Game Options.png?raw=true "Story #1")
+![Alt text](/docs/Wireframes/1_Game Options.png?raw=true "Story #1")
 
 ![Alt text](2_Startup.png?raw=true "Story #2")
 
