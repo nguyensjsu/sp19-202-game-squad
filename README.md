@@ -144,7 +144,7 @@ https://balsamiq.cloud/s41ht0j/pcfr87k
 
 ![Alt text](/docs/Wireframes/2_Startup.png?raw=true "Story #2")
 
-![Alt text](3_Snake attracted.png?raw=true "Story #3")
+![Alt text](/docs/Wireframes/3_Snake%20attracted.png?raw=true "Story #3")
 
 ![Alt text](4_Points.png?raw=true "Story #4")
 
