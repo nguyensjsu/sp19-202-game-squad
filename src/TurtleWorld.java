@@ -9,12 +9,12 @@ public class TurtleWorld extends World {
     }
 
     public void loadPlayScreen() {
-        Helper.deleteAll(this);
+        Helper.resetAll(this);
         reinitialize();
     }
 
     public void loadInitScreen() {
-        Helper.deleteAll(this);
+        Helper.resetAll(this);
         initScreen();
     }
 
