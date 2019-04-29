@@ -23,7 +23,7 @@ public class DifficultyMedium extends Actor
         if(Greenfoot.mouseClicked(this))
         {
             WorldConfig.createWorldConfig(new DifficultyLevelMedium());
-	    world.loadPlayScreen();
+            world.loadPlayScreen();
         }
     }    
 }

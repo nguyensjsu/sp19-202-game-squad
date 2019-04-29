@@ -63,36 +63,20 @@ public class Turtle extends Animal implements IEatSubject, IComponent {
 
     public void checkKeys() {
         if (Greenfoot.isKeyDown("Left")) {
-            keyLeftAction();
+            turn(-WorldConfig.getInstance().TURTLE_DEGREE);
         }
 
         if (Greenfoot.isKeyDown("Right")) {
-            keyRightAction();
+            turn(WorldConfig.getInstance().TURTLE_DEGREE);
         }
 
         if (Greenfoot.isKeyDown("Up")) {
-            keyUpAction();
+            move(WorldConfig.getInstance().TURTLE_SPEED);
         }
 
         if (Greenfoot.isKeyDown("Down")) {
-            keyDownAction();
+            move(-WorldConfig.getInstance().TURTLE_SPEED);
         }
-    }
-
-    public void keyLeftAction() {
-        turn(-WorldConfig.getInstance().TURTLE_DEGREE);
-    }
-
-    public void keyRightAction() {
-        turn(WorldConfig.getInstance().TURTLE_DEGREE);
-    }
-
-    public void keyUpAction() {
-        move(WorldConfig.getInstance().TURTLE_SPEED);
-    }
-
-    public void keyDownAction() {
-        move(-WorldConfig.getInstance().TURTLE_SPEED);
     }
 
     public void eat(Class clss) {
@@ -122,67 +106,4 @@ public class Turtle extends Animal implements IEatSubject, IComponent {
             observer.invoke(className);
         }
     }
-    /*
-    private int points;
-    private Counter counter;
-
-    public Turtle()
-    {
-
-    }
-
-    public Turtle(Counter pointCounter)
-    {
-    counter = pointCounter;
-    }
-
-    public void eat()
-    {
-    if(canSee(Lettuce.class))
-    {
-    eat(Lettuce.class);  
-    //points++;
-    counter.add(5);
-    Greenfoot.playSound("slurp.wav");
-    }
-
-    if(canSee(Bug.class))
-    {
-    eat(Bug.class);  
-    //points = points + 5;
-    counter.add(20);
-    Greenfoot.playSound("slurp.wav");
-    createNewBug();
-    }
-
-    if (counter.getValue() >= 80) 
-    {
-    gameOver();
-    }
-    }
-
-    private void createNewBug()
-    {
-    Bug newBug;
-
-    newBug = new Bug();
-
-    World world;
-    world = getWorld();
-
-    int worldWidth = world.getWidth();
-    int worldHeight = world.getHeight();
-
-    int x = Greenfoot.getRandomNumber(worldWidth);
-    int y = Greenfoot.getRandomNumber(worldHeight);
-
-    world.addObject(newBug, x, y);
-    }
-
-    public void gameOver()
-    {
-    Greenfoot.playSound("fanfare.aiff");
-    Greenfoot.stop();
-    }
-     */
 }
