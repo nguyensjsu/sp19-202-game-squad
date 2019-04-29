@@ -20,6 +20,7 @@ public class Shot extends Actor
             if(snake != null) {
                 Snake sn = (Snake)snake;
                 getWorld().removeObject(snake);
+                new ActorManager().invoke("Snake");
                 getWorld().removeObject(this);
             }
         } else {

@@ -18,8 +18,8 @@ public class ActorManager implements IEatObserver {
     private ActorFactory factory = new ActorGenerator();
     private Set<String> lettuceSet;
 
-    private Set<String> threadQueued = new HashSet<>();
-    private ScheduledExecutorService executor = Executors.newScheduledThreadPool(10);
+    private static Set<String> threadQueued = new HashSet<>();
+    private static ScheduledExecutorService executor = Executors.newScheduledThreadPool(10);
 
     public ActorManager() {
 
@@ -145,9 +145,9 @@ public class ActorManager implements IEatObserver {
             queue(clss, () -> createBug(), WorldConfig.getInstance().BUG_CREATION_DELAY);
         }
 
-        //if (clss.equals(Snake.class.getName())) {
-        //  queue(clss, () -> createSnakes(), WorldConfig.SNAKE_CREATION_DELAY);
-        //}
+        if (clss.equals(Snake.class.getName())) {
+            queue(clss, () -> createSnakes(), WorldConfig.getInstance().SNAKE_CREATION_DELAY);
+        }
     }
 
     private void queue(String clss, Runnable func, long delay) {
