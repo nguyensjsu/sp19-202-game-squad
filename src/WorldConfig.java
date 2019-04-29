@@ -18,21 +18,21 @@ public class WorldConfig {
     public int TURTLE_DEGREE = 3;
     
     // Ammo configuration
-    public int SHOTS = 10;
+    public int SHOTS = 5;
 
     // Level  configuration
-    public int MAX_LEVEL=3;
-    public int LEVEL_FACTOR=20;
+    public int MAX_LEVEL=10;
+    public int LEVEL_FACTOR=20; // level increment in
 
     // Lettuce configuration
-    public int NUM_OF_LETTUCE = 10;
-    public int RED_LETTUCE_CREATION_ON_SCORE = 20;
+    public int NUM_OF_LETTUCE = 5;
+    public int RED_LETTUCE_CREATION_ON_SCORE = 40;
     public int NUM_OF_RED_LETTUCE = 1;
     public int LETTUCE_CREATION_DELAY = 30;
 
     // Snake configuration
     // these will come from strategy pattern, defaults
-    public int NUM_OF_SNAKES = 10;
+    public int NUM_OF_SNAKES = 5;
     public int SPEED_OF_SNAKES = 1;
     public int SNAKES_ATTRACTION = 50;
     public int SNAKE_CREATION_DELAY = 30;

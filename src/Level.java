@@ -30,7 +30,8 @@ public class Level extends Actor implements IScoreObserver
         if (ll > level-1) {
             this.level++;
             if (this.level >= WorldConfig.getInstance().MAX_LEVEL) {
-                Helper.loadEndScreen("WON", Turtle.getTurtle().getWorld()); 
+                Helper.loadEndScreen("WON", Turtle.getTurtle().getWorld());
+                updateImage();
                 Turtle.die();
             }
             updateImage();
