@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=RedLettuceObserver
-comment0.text=\n\ Write\ a\ description\ of\ class\ RedLettuceObserver\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=RedLettuceObserver()
 comment2.params=className

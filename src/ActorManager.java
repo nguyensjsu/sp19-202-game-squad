@@ -117,7 +117,6 @@ public class ActorManager implements IEatObserver {
     }
 
     public void createBug() {
-        // FIXME world check npe
         if (Turtle.getTurtle() != null && Turtle.getTurtle().getWorld() != null) {
             World world = Turtle.getTurtle().getWorld();
             List<Bug> bugs = world.getObjects(Bug.class);
