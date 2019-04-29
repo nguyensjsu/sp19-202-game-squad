@@ -11,9 +11,9 @@ public class ScoreManager implements IScoreObserver {
 
   @Override
   public void scoreAction(int score) {
-    int diff = score - (redLettuceCounter * WorldConfig.RED_LETTUCE_CREATION_ON_SCORE);
+    int diff = score - (redLettuceCounter * WorldConfig.getInstance().RED_LETTUCE_CREATION_ON_SCORE);
     System.out.println("diff:"+diff);
-    if (diff >= WorldConfig.RED_LETTUCE_CREATION_ON_SCORE) {
+    if (diff >= WorldConfig.getInstance().RED_LETTUCE_CREATION_ON_SCORE) {
       actorManager.createRedLettuce();
       redLettuceCounter++;
     }

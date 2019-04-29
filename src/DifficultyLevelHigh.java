@@ -10,7 +10,7 @@ public class DifficultyLevelHigh implements DifficultyStrategy
     public DifficultyLevelHigh()
     {
         this.numberOfSnakes = 10;
-        this.speedOfSnake = 5;
+        this.speedOfSnake = 3;
         this.snakeVisibilityRadius = 30;
     }
     

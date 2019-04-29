@@ -53,7 +53,7 @@ public class Shield extends Animal implements IComponent, IShield {
     }
 
     public void moveactor() {
-        move(WorldConfig.TURTLE_SPEED);
+        move(WorldConfig.getInstance().TURTLE_SPEED);
         checkKeys();
         Turtle t = Turtle.getTurtle();
         try {
@@ -77,19 +77,19 @@ public class Shield extends Animal implements IComponent, IShield {
 
     public void checkKeys() {
         if (Greenfoot.isKeyDown("Left")) {
-            turn(-WorldConfig.TURTLE_DEGREE);
+            turn(-WorldConfig.getInstance().TURTLE_DEGREE);
         }
 
         if (Greenfoot.isKeyDown("Right")) {
-            turn(WorldConfig.TURTLE_DEGREE);
+            turn(WorldConfig.getInstance().TURTLE_DEGREE);
         }
 
         if (Greenfoot.isKeyDown("Up")) {
-            move(WorldConfig.TURTLE_SPEED);
+            move(WorldConfig.getInstance().TURTLE_SPEED);
         }
 
         if (Greenfoot.isKeyDown("Down")) {
-            move(-WorldConfig.TURTLE_SPEED);
+            move(-WorldConfig.getInstance().TURTLE_SPEED);
         }
     
     if ("space".equals(Greenfoot.getKey()))

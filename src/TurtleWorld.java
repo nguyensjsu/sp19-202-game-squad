@@ -5,7 +5,7 @@ public class TurtleWorld extends World {
     public TurtleWorld() {
         super(WorldConfig.getX(), WorldConfig.getY(), WorldConfig.getCellSize());
         System.out.println("construc call");
-        reinitialize();
+        loadInitScreen();
     }
 
     public void loadPlayScreen() {
@@ -20,7 +20,10 @@ public class TurtleWorld extends World {
 
     private void initScreen() {
         // init function
-
+        addObject(new ChooseDifficulty(), 380, 100);
+        addObject(new DifficultyLow(this), 390, 200);
+        addObject(new DifficultyMedium(this), 390, 305);
+        addObject(new DifficultyHigh(this), 390, 410);
     }
 
     private void reinitialize() {

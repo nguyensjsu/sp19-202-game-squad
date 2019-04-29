@@ -11,7 +11,7 @@ public class DifficultyLevelMedium implements DifficultyStrategy
     public DifficultyLevelMedium()
     {
         this.numberOfSnakes = 8;
-        this.speedOfSnake = 3;
+        this.speedOfSnake = 2;
         this.snakeVisibilityRadius = 20;
     }
     
