@@ -180,5 +180,8 @@ https://docs.google.com/spreadsheets/d/1mopQ8FHEn-voEusz9E8PlLg993NWcqjp-fM39Le0
 
 
 
-
+Issues : 
+Multiple commits from web
+ branches are deleted because of settings on merge. Automatic triggers didn't work, we had to manually close the issues. due to accounts flagged. But pull requests are their if you want to look at each branches. 
+ Some issues are duplicate because of account flagged
 
