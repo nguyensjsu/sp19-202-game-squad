@@ -14,7 +14,6 @@ public class Turtle extends Animal implements IEatSubject, IComponent {
     private static Shield shield;
 
     private Turtle() {
-         setImage("turtle.png");
         observers = new ArrayList<>();
     }
 
@@ -51,7 +50,7 @@ public class Turtle extends Animal implements IEatSubject, IComponent {
     }
 
     public void moveactor() {
-        move(WorldConfig.TURTLE_SPEED);
+        move(WorldConfig.getInstance().TURTLE_SPEED);
         checkKeys();
         if (canSee(Lettuce.class)) {
             eat(Lettuce.class);
@@ -63,39 +62,21 @@ public class Turtle extends Animal implements IEatSubject, IComponent {
     }
 
     public void checkKeys() {
-        if (Greenfoot.mousePressed(null)) {
-            MouseInfo mouse = Greenfoot.getMouseInfo();
-            int mouseX = mouse.getX();
-            int mouseY = mouse.getY();
-            int myY = this.getY();
-            int myX = this.getX();
-            if (mouseX < myX) {
-                turn(-WorldConfig.TURTLE_DEGREE);
-            }else if (mouseX > myX) {
-                turn(WorldConfig.TURTLE_DEGREE);
-            }else if (mouseY < myY) {
-                move(WorldConfig.TURTLE_SPEED);
-            }else if (mouseY > myY) {
-                move(-WorldConfig.TURTLE_SPEED);
-            }
+        if (Greenfoot.isKeyDown("Left")) {
+            turn(-WorldConfig.getInstance().TURTLE_DEGREE);
         }
 
-    }
+        if (Greenfoot.isKeyDown("Right")) {
+            turn(WorldConfig.getInstance().TURTLE_DEGREE);
+        }
 
-    public void keyLeftAction() {
-        turn(-WorldConfig.TURTLE_DEGREE);
-    }
+        if (Greenfoot.isKeyDown("Up")) {
+            move(WorldConfig.getInstance().TURTLE_SPEED);
+        }
 
-    public void keyRightAction() {
-        turn(WorldConfig.TURTLE_DEGREE);
-    }
-
-    public void keyUpAction() {
-        move(WorldConfig.TURTLE_SPEED);
-    }
-
-    public void keyDownAction() {
-        move(-WorldConfig.TURTLE_SPEED);
+        if (Greenfoot.isKeyDown("Down")) {
+            move(-WorldConfig.getInstance().TURTLE_SPEED);
+        }
     }
 
     public void eat(Class clss) {
@@ -125,67 +106,4 @@ public class Turtle extends Animal implements IEatSubject, IComponent {
             observer.invoke(className);
         }
     }
-    /*
-    private int points;
-    private Counter counter;
-
-    public Turtle()
-    {
-
-    }
-
-    public Turtle(Counter pointCounter)
-    {
-    counter = pointCounter;
-    }
-
-    public void eat()
-    {
-    if(canSee(Lettuce.class))
-    {
-    eat(Lettuce.class);  
-    //points++;
-    counter.add(5);
-    Greenfoot.playSound("slurp.wav");
-    }
-
-    if(canSee(Bug.class))
-    {
-    eat(Bug.class);  
-    //points = points + 5;
-    counter.add(20);
-    Greenfoot.playSound("slurp.wav");
-    createNewBug();
-    }
-
-    if (counter.getValue() >= 80) 
-    {
-    gameOver();
-    }
-    }
-
-    private void createNewBug()
-    {
-    Bug newBug;
-
-    newBug = new Bug();
-
-    World world;
-    world = getWorld();
-
-    int worldWidth = world.getWidth();
-    int worldHeight = world.getHeight();
-
-    int x = Greenfoot.getRandomNumber(worldWidth);
-    int y = Greenfoot.getRandomNumber(worldHeight);
-
-    world.addObject(newBug, x, y);
-    }
-
-    public void gameOver()
-    {
-    Greenfoot.playSound("fanfare.aiff");
-    Greenfoot.stop();
-    }
-     */
 }

@@ -18,8 +18,8 @@ public class ActorManager implements IEatObserver {
     private ActorFactory factory = new ActorGenerator();
     private Set<String> lettuceSet;
 
-    private Set<String> threadQueued = new HashSet<>();
-    private ScheduledExecutorService executor = Executors.newScheduledThreadPool(10);
+    private static Set<String> threadQueued = new HashSet<>();
+    private static ScheduledExecutorService executor = Executors.newScheduledThreadPool(10);
 
     public ActorManager() {
 
@@ -41,7 +41,7 @@ public class ActorManager implements IEatObserver {
             int worldWidth = world.getWidth();
             int worldHeight = world.getHeight();
 
-            int remaining = WorldConfig.NUM_OF_LETTUCE - existing;
+            int remaining = WorldConfig.getInstance().NUM_OF_LETTUCE - existing;
 
             int i = 0;
             while (0 < remaining) {
@@ -68,7 +68,7 @@ public class ActorManager implements IEatObserver {
             int worldWidth = world.getWidth();
             int worldHeight = world.getHeight();
 
-            int remaining = WorldConfig.NUM_OF_SNAKES - existing;
+            int remaining = WorldConfig.getInstance().NUM_OF_SNAKES - existing;
 
             int i = 0;
             while (0 < remaining) {
@@ -117,7 +117,6 @@ public class ActorManager implements IEatObserver {
     }
 
     public void createBug() {
-        // FIXME world check npe
         if (Turtle.getTurtle() != null && Turtle.getTurtle().getWorld() != null) {
             World world = Turtle.getTurtle().getWorld();
             List<Bug> bugs = world.getObjects(Bug.class);
@@ -139,16 +138,16 @@ public class ActorManager implements IEatObserver {
     @Override
     public void invoke(String clss) {
         if (clss.equals(Lettuce.class.getName())) {
-            queue(clss, () -> createLettuce(), WorldConfig.LETTUCE_CREATION_DELAY);
+            queue(clss, () -> createLettuce(), WorldConfig.getInstance().LETTUCE_CREATION_DELAY);
         }
 
         if (clss.equals(Bug.class.getName())) {
-            queue(clss, () -> createBug(), WorldConfig.BUG_CREATION_DELAY);
+            queue(clss, () -> createBug(), WorldConfig.getInstance().BUG_CREATION_DELAY);
         }
 
-        //if (clss.equals(Snake.class.getName())) {
-        //  queue(clss, () -> createSnakes(), WorldConfig.SNAKE_CREATION_DELAY);
-        //}
+        if (clss.equals(Snake.class.getName())) {
+            queue(clss, () -> createSnakes(), WorldConfig.getInstance().SNAKE_CREATION_DELAY);
+        }
     }
 
     private void queue(String clss, Runnable func, long delay) {

@@ -3,7 +3,7 @@ import greenfoot.*;
  public class ShieldBoostDecorator extends ShieldDecorator implements IShotSubject
 {
     IShield shield;
-    int shots = WorldConfig.SHOTS;
+    int shots = WorldConfig.getInstance().SHOTS;
     IShotObserver observer = null;
 
      public ShieldBoostDecorator(IShield shield)
@@ -35,7 +35,7 @@ import greenfoot.*;
         world.addObject(shot, a.getX(), a.getY());
         shot.setRotation(a.getRotation());
         shot.move(55);
-        move(WorldConfig.TURTLE_SPEED);
+        move(WorldConfig.getInstance().TURTLE_SPEED);
         this.shots -= 1;
         if (this.shots == 0)
             notifyObserver();

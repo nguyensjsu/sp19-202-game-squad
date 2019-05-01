@@ -11,7 +11,7 @@ public class DifficultyLevelLow implements DifficultyStrategy
     public DifficultyLevelLow()
     {
         this.numberOfSnakes = 5;
-        this.speedOfSnake = 2;
+        this.speedOfSnake = 1;
         this.snakeVisibilityRadius = 10;
     }
     
