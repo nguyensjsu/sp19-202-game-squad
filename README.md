@@ -35,7 +35,7 @@ https://docs.google.com/spreadsheets/d/1mopQ8FHEn-voEusz9E8PlLg993NWcqjp-fM39Le0
 
 <h3>Advertising our game</h3>
 
-https://biteable.com/watch/mobile-app-ad-copy-2241439
+https://www.youtube.com/watch?v=-qXL-YAMdGE
 
 <h2>Individual Contributions</h2>
 
