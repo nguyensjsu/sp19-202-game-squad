@@ -1,58 +1,4 @@
 # Game Squad
-# Starbucks Application
-
-**Chirag Arora**
-
-**CMPE 202**
-
-**Personal Project**
-
-**San Jose State University**
-
-Table of contents
-=================
-
-   * [Existing application](#existing-application)
-   * [Use Case](#use-case)
-   * [Design Notes](#design-notes)
-      * [Composite](#composite)
-      * [State](#state)
-      * [Observer](#observer)
-      * [Singleton](#singleton)
-      * [Mixins](#mixins)
-   * [Class Diagram](#class-diagram)
-   * [Sequence Diagram](#sequence-diagram)
-      * [Add Card Screen Sequence Diagram](#add-card-screen-sequence-diagram)
-      * [Add Card Sequence Diagram](#add-card-sequence-diagram)
-   * [Extra Credit](#extra-credit)
-      * [Test Cases](#test-cases)
-      * [Code Smells](#code-smells)
-      * [First Ten](#first-ten)
-
-This Mobile App Simulator Project is for Starbucks mobile app. The project is mainly implemented and designed keeping in mind different design patterns required for the class CMPE202.
-
-The partial code was provided and the requirement of the project was to implement
-  - Add New Card functionality
-  - Complete the implementation of existing card
-  - Provide use case and sequence diagrams of add new card functionality
-
-
-## Existing application
-The behaviour of existing application was kept in mind to design the new features, that is, without breaking existing test cases and functionality, implement new features. 
-
-Existing application uses many different patterns already such as 
-* Screen uses Composite pattern
-* Keypad and PinEntryMachine share observer pattern
-* PinEntryMachine uses state pattern to keep track of the pin states
-* Stategy pattern is used to display the output in different format on the frame.
-
-Before implementing new features, a bit of refactoring was done to bring down the code smells, such as
-- implementing StaticTouchHandler interface as mixins to share the common behavior of multiple screens 
-- implementing IScreenIterable to reduce the methods of Screen class [Shotgun surgery smell]
-- implementing DigitsTracker to remove the responsiblity of PinEntryMachine [GodClass smell] 
-================================
-
-# Game Squad
 
 Table of contents
 =================
@@ -134,6 +80,15 @@ Api : ```createSnakes(), createLettuce(), createRedLettuce(), createBug()```
 
 
 #### Composite
+
+We used Composite pattern to add shield to the Turtle. The shield and turtle share methods to move around, action on keypress and snake Hit. Shield and turtle move together and can be treated as a group. With composite we can add multiple accessories to Turtle and move them together. Also Implemented a feature of changing shield power. On intersection with a snake power of shield decreases by 1, which also results in changing the image of the shield to a smaller shield. 
+
+Interface: ```IComponent```
+Classes: ```Shield```, ```Turtle```
+
+![Alt text](/docs/Story7-Shield.png?raw=true "Composite Pattern")
+
+
 #### Observer
 
 Though we used observer patterns quite a bit in our game, but the main observer in focus is advancing level. Once Turtle eats lettuce or bug, the score counter gets updated (via observer) and level counter. Both ```ScoreCounter``` and ```Level``` implements  ```IScoreObserver```. ```IScoreSubject``` is implemented by ```Counter```. The data flow is such, that on every eat, we update the counter via observer and once the counter is updated we update the level via another observer. Reason we implemented in such a way is because Level upgrade events are only emmited at a factor of 20 (when we change our next level).
@@ -166,8 +121,19 @@ Class: ```ScoreManager```, ```Level```
 
 
 #### Feature 4
+Point System for Lettuce and Bug
+
+This feature is related to the Points System for Lettuce and Bug. When the turtle eats lettuce or bug, we notify the game counter to increase the score by either 5 (for lettuce) and 20 (for bug). Point system uses a combination of observer and ```ScoreManager```. Scoremanager tracks the score and creates Redlettuce after it reaches it threshold. Basically point system is the backbone of the game to keep all the subjects and observers go hand-in-hand.
+
+![Alt text](/docs/Story4-EatLettuceAndBug(Point%20System).png?raw=true "Eat Lettuce And Bug")
+
+
 #### Feature 5
+Snake Attraction
 
+For this we have used method ```getNeighbours()``` provided by Greenfoot. On every move snake keeps on checking if there is a turtle in its radius of effect (```getNeighbours()```). On finding	a turtle in its neighborhood, snake’s changes its direction and starts moving in direction of the turtle. Also snake’s image changes to ‘RedSnakeImage’ on attraction.
 
+Classes: ```Snake```, ```Turtle```
 
+![Alt text](/docs/Story3-SnakeAttracted.png?raw=true "Snake Attraction")
 
