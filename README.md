@@ -140,27 +140,6 @@ https://balsamiq.cloud/s41ht0j/pcfr87k
 
 #### Screenshots of each wireframs
 
-![Alt text](/docs/Wireframes/1_Game%20Options.png?raw=true "Story #1")
-
-![Alt text](/docs/Wireframes/2_Startup.png?raw=true "Story #2")
-
-![Alt text](/docs/Wireframes/3_Snake%20attracted.png?raw=true "Story #3")
-
-![Alt text](/docs/Wireframes/4_Points.png?raw=true "Story #4")
-
-![Alt text](/docs/Wireframes/5_Turtle%20dies.png?raw=true "Story #5")
-
-![Alt text](/docs/Wireframes/6_Advancing%20to%20next%20level.png?raw=true "Story #6")
-
-![Alt text](/docs/Wireframes/7_Shield.png?raw=true "Story #7")
-
-![Alt text](/docs/Wireframes/8_Shooting%20power.png?raw=true "Story #8")
-
-![Alt text](/docs/Wireframes/9_Lady%20Bug%20-%20Story%20%239.png?raw=true "Story #9")
-
-![Alt text](/docs/Wireframes/10_Won%20the%20game.png?raw=true "Story #10")
-
-
 ### Advertising our game
 
 https://biteable.com/watch/mobile-app-ad-copy-2241439
