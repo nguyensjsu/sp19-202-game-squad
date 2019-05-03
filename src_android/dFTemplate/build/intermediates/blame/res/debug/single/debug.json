@@ -1,0 +1,274 @@
+[
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable_stop.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable/stop.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-hdpi-v4_start.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable-hdpi-v4/start.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable_droidfoot_launcher.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable/droidfoot_launcher.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout-v21_notification_action.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-xhdpi-v4_speed.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable-xhdpi-v4/speed.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable-mdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-hdpi-v4_droidfoot_launcher.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable-hdpi-v4/droidfoot_launcher.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout_notification_template_part_time.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout_activity_help.xml.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/layout/activity_help.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout-v16_notification_template_custom_big.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/layout-v16/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/xml_preferences_old.xml.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/xml/preferences_old.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout_notification_template_lines_media.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/9440b8ef6f01f1492347d2bf4f999608/res/layout/notification_template_lines_media.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout_notification_template_big_media_custom.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/9440b8ef6f01f1492347d2bf4f999608/res/layout/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout_notification_template_big_media_narrow.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/9440b8ef6f01f1492347d2bf4f999608/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-hdpi-v4_stop.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable-hdpi-v4/stop.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-mdpi-v4_reset.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable-mdpi-v4/reset.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout_notification_action.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/layout/notification_action.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/menu_menu_help.xml.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/menu/menu_help.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout_activity_droidfoot.xml.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/layout/activity_droidfoot.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/xml_preferences.xml.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/xml/preferences.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-v21_notification_action_background.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout_notification_template_icon_group.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-hdpi-v4_speed.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable-hdpi-v4/speed.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout-v21_notification_template_custom_big.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable_notification_bg.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout_notification_media_action.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/9440b8ef6f01f1492347d2bf4f999608/res/layout/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout_notification_media_cancel_action.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/9440b8ef6f01f1492347d2bf4f999608/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable_notification_tile_bg.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout-v21_notification_action_tombstone.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable_speed.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable/speed.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout_notification_template_media.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/9440b8ef6f01f1492347d2bf4f999608/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout_notification_template_big_media.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/9440b8ef6f01f1492347d2bf4f999608/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout_notification_template_media_custom.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/9440b8ef6f01f1492347d2bf4f999608/res/layout/notification_template_media_custom.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable_reset.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable/reset.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-mdpi-v4_start.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable-mdpi-v4/start.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout-v21_notification_template_icon_group.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-mdpi-v4_droidfoot_launcher.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable-mdpi-v4/droidfoot_launcher.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/menu_menu_droidfoot.xml.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/menu/menu_droidfoot.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout_notification_template_part_chronometer.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout_notification_template_custom_big.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/layout/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-xhdpi-v4_droidfoot_launcher.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable-xhdpi-v4/droidfoot_launcher.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-mdpi-v4_stop.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable-mdpi-v4/stop.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable_notification_bg_low.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable_start.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable/start.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-hdpi-v4_reset.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable-hdpi-v4/reset.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-xhdpi-v4_stop.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable-xhdpi-v4/stop.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/raw_help.html.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/raw/help.html"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable_notification_icon_background.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout_notification_template_big_media_narrow_custom.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/9440b8ef6f01f1492347d2bf4f999608/res/layout/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-mdpi-v4_speed.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable-mdpi-v4/speed.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/layout_notification_action_tombstone.xml.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/menu_menu_settings.xml.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/menu/menu_settings.xml"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-xhdpi-v4_start.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable-xhdpi-v4/start.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/Users/megha/.gradle/caches/transforms-2/files-2.1/308d9d497906a7597a667b9967fc145e/res/drawable-hdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/res/merged/debug/drawable-xhdpi-v4_reset.png.flat",
+        "source": "/Users/megha/Documents/TurtleGame/droidfoot/build/intermediates/packaged_res/debug/drawable-xhdpi-v4/reset.png"
+    }
+]

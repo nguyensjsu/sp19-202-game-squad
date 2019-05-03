@@ -1,0 +1,4 @@
+#Wed Apr 24 15:24:28 PDT 2019
+base.0=/Users/megha/Documents/TurtleGame/dFTemplate/build/intermediates/transforms/dexMerger/debug/3
+path.0=classes.dex
+renamed.0=classes.dex

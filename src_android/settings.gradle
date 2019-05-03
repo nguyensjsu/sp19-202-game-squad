@@ -1,0 +1,2 @@
+include ':droidfoot'
+include ':dFTemplate'
