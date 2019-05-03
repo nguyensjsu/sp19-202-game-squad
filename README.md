@@ -34,7 +34,8 @@ Finally, we came up with 10 user stories and implemented all 10 features. We pic
 https://docs.google.com/spreadsheets/d/1mopQ8FHEn-voEusz9E8PlLg993NWcqjp-fM39Le03FU/edit
 
 <h3>Burndown Map</h3>
-![Alt text](/docs/BurnDownChart.PNG?raw=true "Burndown Map")
+<img src="docs/BurnDownChart.PNG" alt="Markdown Monster icon" style="float: left; margin-right: 10px;" />
+<br/>
 
 <h3>Advertising our game</h3>
 
