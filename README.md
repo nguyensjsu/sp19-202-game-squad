@@ -37,15 +37,38 @@ https://docs.google.com/spreadsheets/d/1mopQ8FHEn-voEusz9E8PlLg993NWcqjp-fM39Le0
 
 https://www.youtube.com/watch?v=-qXL-YAMdGE
 
-<h2>Individual Contributions</h2>
+<h3>Individual Contributions</h3>
 
+All team members contributed equally to create mocks, original features for the game, user specifications, accomodating sequence diagrams and presentation. We took turn acting as a scrum master during the project.
 
+Megha - 1. Worked on Decorator pattern for shield which decorates the shield with power to attack snakes  
+        2. Worked on feature point system which controls the levels and scoring of the game  
+        3. Implemented changes to make greenfoot application compatible in Android for wow factor
+        
+Marianne - 1. Pitched the idea for this wonderfull game and also worked on our stunning advertisement
+           2. Worked on observer pattern to update the level in the game
+           3. Worked on lady bug movement feature which makes ladybug move randomly and over other actors
 
+Anjali - 1. Worked on Composite pattern to add shield with power on turtle. Due to this pattern turtle and shield act like one component and one can add multiple attributes to the turtle as a component
+         2. Worked on feature Snake Attraction. This enables snake to get attracted towards turtle. If turtle is in its vicinity the snake turns red
+         3. Converted the mocks from paper to balsamiq mocks
+         
+Chirag - 1. Worked on factory pattern to create all actors using multithread and timer. After submitting the create actor request to the queue, the implementation creates actors dynamically
+         2. Worked on feature 'Game Over' when turtle dies. In this feature when snake eats turtle, game world state is changed to EndWorld state and all the objects are dropped from the world
+         3. Researched on multiplayer and android application for wow factor
+         
+Saumil - 1. Worked on the strategy pattern to add difficulty levels to the game (LOW, MEDIUM, HIGH). These difficulty levels control the speed and count of the snakes in the world
+         2. Worked on the feature 'Won The Game' which keeps track of levels. Once points reach the maximum threshold, the world transitions to end of game
+         3. Worked on README enhancements
+         
+         
+<h2>Issues</h2>
 
-Issues : 
-Multiple commits from web
- branches are deleted because of settings on merge. Automatic triggers didn't work, we had to manually close the issues. due to accounts flagged. But pull requests are their if you want to look at each branches. 
- Some issues are duplicate because of account flagged
+- We had some issues in editing README and ended up with multiple one liner commits from web
+- On merging the branch, the setting to auto delete the branch was used. Due to which branches were deleted.  
+- We had setup automatic triggers to update the issues to change its status, but those didn't work. We had to manually close   the issues. But pull requests are their if you want to look at each branches.
+- Due to github account getting flagged, Chirag was blocked. We ended up creating duplicate issues with same context. Now account has been reset. We see all the duplicate issues under issues section.
+- Due to unclear instructions we are considering project board as Google Task Sheet. 
 
 <h2>Wow Factor</h2>
 
