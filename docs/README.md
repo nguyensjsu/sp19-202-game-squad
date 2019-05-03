@@ -57,7 +57,9 @@ Table of contents
 Shield class contains a decorator object which is initially set to Null. The ```attack()``` method of ```Shield``` invokes the decorator's attack method if it is not null. Initially Shield class does not perform any opertaion since the decorator object is Null. Once Turtle eats the ```RedLettuce```, ```RedLettuceObserver``` assigns ```ShieldBoostDecorator``` as the decorator. ```attack()``` method is invoked on clicking the shield. ShieldBoostDecorator's attack() method releases a Shot. It is assigned 10 Shots and once all Shots are used, the decorator is reset to null.
 
 ![Alt text](/docs/Story8-ShootingPower.png?raw=true "Decorator Pattern")
-![Alt text](/docs/Story8_use_case_specification.png?raw=true)
+
+<img src="/docs/Story8_use_case_specification.png"  width="500" height="500">
+
 
 #### Strategy
 
@@ -68,7 +70,8 @@ Strategy Concrete Class: ```DifficultyLevelLow```, ```DifficultyLevelMedium```, 
 Actor: ```DifficultyLow```, ```DifficultyMedium```, ```DifficultyHigh```
 
 ![Alt text](/docs/Story1-GameStartUpScreen.png?raw=true "Strategy Pattern")
-![Alt text](/docs/Story1_use_case_specification.png?raw=true)
+
+<img src="/docs/Story1_use_case_specification.png"  width="500" height="500">
 
 #### Factory
 
@@ -79,7 +82,8 @@ Factory Concrete: ```ActorGenerator```
 Api : ```createSnakes(), createLettuce(), createRedLettuce(), createBug()```
 
 ![Alt text](/docs/Story2-StartGame.png?raw=true "Factory Pattern")
-![Alt text](/docs/Story2_use_case_specification.png?raw=true)
+
+<img src="/docs/Story2_use_case_specification.png"  width="500" height="500">
 
 #### Composite
 
@@ -89,14 +93,16 @@ Interface: ```IComponent```
 Classes: ```Shield```, ```Turtle```
 
 ![Alt text](/docs/Story7-Shield.png?raw=true "Composite Pattern")
-![Alt text](/docs/Story7_use_case_specification.png?raw=true)
+
+<img src="/docs/Story7_use_case_specification.png"  width="500" height="500">
 
 #### Observer
 
 Though we used observer patterns quite a bit in our game, but the main observer in focus is advancing level. Once Turtle eats lettuce or bug, the score counter gets updated (via observer) and level counter. Both ```ScoreCounter``` and ```Level``` implements  ```IScoreObserver```. ```IScoreSubject``` is implemented by ```Counter```. The data flow is such, that on every eat, we update the counter via observer and once the counter is updated we update the level via another observer. Reason we implemented in such a way is because Level upgrade events are only emmited at a factor of 20 (when we change our next level).
 
 ![Alt text](/docs/Story6-AdvancingToNextLevel.png?raw=true "Observer Pattern")
-![Alt text](/docs/Story6_use_case_specification.png?raw=true)
+
+<img src="/docs/Story6_use_case_specification.png"  width="500" height="500">
 
 #### Feature 1
 Game End: 
@@ -104,7 +110,8 @@ Game End:
 This feature is to end the game once snake eats a turtle. Since snake can move freely and in case turtle has 0 shield power, if snakes get in touch with Turtle, using the observer patterns we have in our game. On this special event, the world drops all its actors and displays Looser. This event only and can only happen when shield is not their on the turtle.
 
 ![Alt text](/docs/Story5-EatTurtle.png?raw=true "Game End")
-![Alt text](/docs/Story5_use_case_specification.png?raw=true)
+
+<img src="/docs/Story5_use_case_specification.png"  width="500" height="500">
 
 #### Feature 2
 Bug Move Randomly:
@@ -112,7 +119,8 @@ Bug Move Randomly:
 This feature enables our Lady bug to move randomly. When lady bug encounters the world's edge, it changes its position and make turns instead of getting stuck at the edge. The feature enables bug to move on top of turtles and lettuces. This is to avoid collisions between different actors in our game. 
 
 ![Alt text](/docs/Story9-LadyBug.png?raw=true "Bug Move Randomly")
-![Alt text](/docs/Story9_use_case_specification.png?raw=true)
+
+<img src="/docs/Story9_use_case_specification.png"  width="500" height="500">
 
 #### Feature 3
 Won the game
@@ -123,7 +131,8 @@ Interface: ```IScoreObserver```
 Class: ```ScoreManager```, ```Level```
 
 ![Alt text](/docs/Stor10-WonTheGame.png?raw=true "Won the game")
-![Alt text](/docs/Story10_use_case_specification.png?raw=true)
+
+<img src="/docs/Story10_use_case_specification.png"  width="500" height="500">
 
 #### Feature 4
 Point System for Lettuce and Bug
@@ -131,7 +140,8 @@ Point System for Lettuce and Bug
 This feature is related to the Points System for Lettuce and Bug. When the turtle eats lettuce or bug, we notify the game counter to increase the score by either 5 (for lettuce) and 20 (for bug). Point system uses a combination of observer and ```ScoreManager```. Scoremanager tracks the score and creates Redlettuce after it reaches it threshold. Basically point system is the backbone of the game to keep all the subjects and observers go hand-in-hand.
 
 ![Alt text](/docs/Story4-EatLettuceAndBug(Point%20System).png?raw=true "Eat Lettuce And Bug")
-![Alt text](/docs/Story4_use_case_specification.png?raw=true)
+
+<img src="/docs/Story4_use_case_specification.png"  width="500" height="500">
 
 #### Feature 5
 Snake Attraction
@@ -141,4 +151,5 @@ For this we have used method ```getNeighbours()``` provided by Greenfoot. On eve
 Classes: ```Snake```, ```Turtle```
 
 ![Alt text](/docs/Story3-SnakeAttracted.png?raw=true "Snake Attraction")
-![Alt text](/docs/Story3_use_case_specification.png?raw=true)
+
+<img src="/docs/Story3_use_case_specification.png"  width="500" height="500">
