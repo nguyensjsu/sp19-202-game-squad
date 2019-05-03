@@ -1,6 +1,6 @@
 # Week 1 Scrum Report
 
-## Megha Lnu
+## Megha
 
 ### Finished Last Week
 
