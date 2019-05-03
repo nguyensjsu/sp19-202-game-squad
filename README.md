@@ -41,27 +41,27 @@ https://www.youtube.com/watch?v=-qXL-YAMdGE
 
 All team members contributed equally to create mocks, original features for the game, user specifications, accomodating sequence diagrams and presentation. We took turn acting as a scrum master during the project.
 
-Megha - 1. Worked on Decorator pattern for shield which decorates the shield with power to attack snakes  
-        2. Worked on feature point system which controls the levels and scoring of the game  
-        3. Implemented changes to make greenfoot application compatible in Android for wow factor
-        
-Marianne - 1. Pitched the idea for this wonderfull game and also worked on our stunning advertisement
-           2. Worked on observer pattern to update the level in the game
-           3. Worked on lady bug movement feature which makes ladybug move randomly and over other actors
+- Megha
+    - Worked on Decorator pattern for shield which decorates the shield with power to attack snakes
+    - Worked on feature point system which controls the levels and scoring of the game
+    - Implemented changes to make greenfoot application compatible in Android for wow factor
+- Marianne
+    - Pitched the idea for this wonderfull game and also worked on our stunning advertisement
+    - Worked on observer pattern to update the level in the game
+    - Worked on lady bug movement feature which makes ladybug move randomly and over other actors
+- Anjali
+    - Worked on Composite pattern to add shield with power on turtle. Due to this pattern turtle and shield act like one component and one can add multiple attributes to the turtle as a component
+    - Worked on feature Snake Attraction. This enables snake to get attracted towards turtle. If turtle is in its vicinity the snake turns red
+    - Converted the mocks from paper to balsamiq mocks
+- Chirag
+    - Worked on factory pattern to create all actors using multithread and timer. After submitting the create actor request to the queue, the implementation creates actors dynamically
+    - Worked on feature 'Game Over' when turtle dies. In this feature when snake eats turtle, game world state is changed to EndWorld state and all the objects are dropped from the world
+    - Researched on multiplayer and android application for wow factor
+- Saumil
+    - Worked on the strategy pattern to add difficulty levels to the game (LOW, MEDIUM, HIGH). These difficulty levels control the speed and count of the snakes in the world
+    - Worked on the feature 'Won The Game' which keeps track of levels. Once points reach the maximum threshold, the world transitions to end of game
+    - Worked on README enhancements
 
-Anjali - 1. Worked on Composite pattern to add shield with power on turtle. Due to this pattern turtle and shield act like one component and one can add multiple attributes to the turtle as a component
-         2. Worked on feature Snake Attraction. This enables snake to get attracted towards turtle. If turtle is in its vicinity the snake turns red
-         3. Converted the mocks from paper to balsamiq mocks
-         
-Chirag - 1. Worked on factory pattern to create all actors using multithread and timer. After submitting the create actor request to the queue, the implementation creates actors dynamically
-         2. Worked on feature 'Game Over' when turtle dies. In this feature when snake eats turtle, game world state is changed to EndWorld state and all the objects are dropped from the world
-         3. Researched on multiplayer and android application for wow factor
-         
-Saumil - 1. Worked on the strategy pattern to add difficulty levels to the game (LOW, MEDIUM, HIGH). These difficulty levels control the speed and count of the snakes in the world
-         2. Worked on the feature 'Won The Game' which keeps track of levels. Once points reach the maximum threshold, the world transitions to end of game
-         3. Worked on README enhancements
-         
-         
 <h2>Issues</h2>
 
 - We had some issues in editing README and ended up with multiple one liner commits from web
