@@ -81,9 +81,21 @@ Table of contents
 ##### Decorator
 ##### Strategy
 ##### Factory
+
+We used factory pattern to create the actors on the world. Main actors in our game are : Red Lettuce, Lettuce, Snake, and Bug. All actors are being created using Factory pattern. We have an interface Actor Factory and its concrete class Actor Generator. When an actor dies (except Turtle), the observers or the world submits a request to create that specfic actor to the Actor Manager. Actor Manager then using a timer queue the request in the threadpool. When one of the background threads are free, thread using the Factory pattern, calls the ActorGenerator to create the specific actor. We have some time threshold to wait for few seconds before we see an actor in the world.
+
+Factory Interface : ActorFactory
+Factory Concrete: ActorGenerator
+Api : createSnakes(), createLettuce(), createRedLettuce(), createBug()
+
 ##### Composite
 ##### Observer
 ##### Feature 1
+Game Over: 
+
+This feature is to end the game once snake eats a turtle. Since snake can move freely and in case turtle has 0 shield power, if snakes get in touch with Turtle, using the observer patterns we have in our game. On this special event, the world drops all its actors and displays Looser. This event only and can only happen when shield is not their on the turtle.
+
+
 ##### Feature 2
 ##### Feature 3
 ##### Feature 4
