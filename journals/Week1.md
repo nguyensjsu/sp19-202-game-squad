@@ -22,6 +22,13 @@
 - Task1: 1 hrs
 - Task2: 3 hrs - decided during chatting and meeting
 - Task 3: 2 hours
+
+### XP Core Value
+
+I was given courage. I made sure that we all give correct information regarding progress and 
+estimates. I also made sure that we adapt our processes as needed and that we should not 
+be afraid to speak up when needed. 
+
 <h2></h2>
 <h2>Chirag Arora</h2>
 
