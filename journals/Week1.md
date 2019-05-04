@@ -46,7 +46,7 @@ be afraid to speak up when needed.
 
 - Problems hooking up with team.
 
-### Time Spend
+### Time Spent
 
 - Task1: 5 hrs
 - Task2: 5 hrs 
@@ -74,7 +74,7 @@ Difficulty (Low, Medium, High)
 
 - We had problems in finding a time to meet this week
 
-### Time Spend
+### Time Spent
 
 - Task1: 5 hrs
 - Task2: 5 hrs 
@@ -102,7 +102,7 @@ I also encourage my teammates to give feedback regularly amongst us.
 - Due to exams and different schedules, we didn't get to meet
   until Friday this week
 
-### Time Spend
+### Time Spent
 
 - Task1: 5 hrs
 - Task2: 5 hrs
@@ -129,7 +129,7 @@ when snake hits the shield
 
 - We had some challenges finding time to meet this week
 
-### Time Spend
+### Time Spent
 
 - Task1: 6 hrs
 - Task2: 4 hrs 

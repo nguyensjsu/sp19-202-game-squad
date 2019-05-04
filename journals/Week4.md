@@ -14,11 +14,11 @@
 
 - No problems
 
-### Time Spend
+### Time Spent
 
 - Task1: 2 hrs
 - Task2: 4 hrs
-- Task 3: TBD
+- Task 3: 8 hrs
 
 ### Ensuring my XP core value of Courage
 
@@ -43,7 +43,7 @@ each sprint.
 ### Problems
 
 
-### Time Spend
+### Time Spent
 
 - Task1: 6 hrs
 - Task2: 1 hrs 
@@ -66,7 +66,7 @@ Everyone were respectful. Team did a great job in the 4 week sprint.
 
 - I didn't have any blockers.
 
-### Time Spend
+### Time Spent
 
 Task 1: 3 hours
 Task 2: 4 hours
@@ -99,7 +99,7 @@ This is the last week of sprint. I am happy that everyone considered my feedback
 
 - None
 
-### Time Spend
+### Time Spent
 
 - Task1: 2 hrs
 - Task2: 4 hrs

@@ -22,12 +22,12 @@
   UML diagram and task board items. After we had a 
   meeting, this issue was resolved.
 
-### Time Spend
+### Time Spent
 
 - Task1: 6 hrs
 - Task2: 2 hrs
 - Task 3: 5 hours
-- Task 4: 1 hour
+- Task 4: 3 hour
 
 ### Ensuring my XP core value of Courage
 
@@ -50,7 +50,7 @@ meetings.
 ### Problems
 
 
-### Time Spend
+### Time Spent
 
 - Task1: 5 hrs
 - Task2: 3 hrs 
@@ -77,7 +77,7 @@ So far all criteria for respect XP values were met. All team members reported no
 
 - Due to urgent work issues, I was not able to spend as much time as I decided to work on the project.
 
-### Time Spend
+### Time Spent
 
 - Task 1: 4 hours
 - Task 2: 4 hours
@@ -111,7 +111,7 @@ In this week, I did peer review for many pull requests and I tested different fe
 
 - Our team faced some issues in code integration. Together we fixed the issue and created a clean master branch with all features integrated.
 
-### Time Spend
+### Time Spent
 
 - Task1: 4 hrs
 - Task2: 2 hrs

@@ -160,9 +160,7 @@ Since we have started development this week, a lot of features are dependent on 
 
 ### Problems
 
-- I was not able to get the turtle to make any nice moves. Also, as a team, we did not 
-  find this feature to be very valuable. Therefore, we removed this feature from the 
-  backlog.
+N/A
 
 ### Time Spend
 
