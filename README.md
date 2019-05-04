@@ -39,7 +39,7 @@ https://docs.google.com/spreadsheets/d/1mopQ8FHEn-voEusz9E8PlLg993NWcqjp-fM39Le0
 
 <h3>Advertising our game</h3>
 
-https://www.youtube.com/watch?v=-qXL-YAMdGE
+https://www.youtube.com/watch?v=X-OZWBY9mkE
 
 <h3>Individual Contributions</h3>
 
