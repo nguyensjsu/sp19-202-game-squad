@@ -72,7 +72,7 @@ All team members contributed equally to create mocks, original features for the 
 - On merging the branch, the setting to auto delete the branch was used. Due to which branches were deleted.  
 - We had setup automatic triggers to update the issues to change its status, but those didn't work. We had to manually close   the issues. But pull requests are their if you want to look at each branches.
 - Due to github account getting flagged, Chirag was blocked. We ended up creating duplicate issues with same context. Now account has been reset. We see all the duplicate issues under issues section.
-- Due to unclear instructions we are considering project board as Google Task Sheet. 
+- We were uncertain about project board. We interpreted project board as Google Task Sheet.
 
 <h2>Wow Factor</h2>
 
