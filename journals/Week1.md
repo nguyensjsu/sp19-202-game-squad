@@ -1,6 +1,6 @@
 <h1>Week 1 Scrum Report</h1>
 
-<h3>Marianne Paulson</h3>
+<h2>Marianne Paulson</h2>
 
 ### Finished Last Week 
 - Task 1: Picked a Core XP value - Courage 
@@ -23,7 +23,7 @@
 - Task2: 3 hrs - decided during chatting and meeting
 - Task 3: 2 hours
 
-<h3>Saumil N Patel</h3>
+<h2>Saumil N Patel</h2>
 
 ### Finished Last Week 
 - Read Greenfoot Documentation and some code examples
@@ -51,7 +51,7 @@ As a team member responsible for feedback I have made sure that I give timely an
 correct feedback to my teammates about their ideas and implementation approaches.
 I also encourage my teammates to give feedback regularly amongst us.
 
-<h3>Chirag Arora</h3>
+<h2>Chirag Arora</h2>
 
 ### Finished Last Week 
 - Looked at several games online since our team decided for game option 
@@ -78,7 +78,7 @@ I was given respect. I made sure this week that every teammember should be
 respectful to eachother by reminding them about this important aspect.
 It is one of the core values in XP.
 
-<h3>Megha</h3>
+<h2>Megha</h2>
 
 ### Finished Last Week
 
@@ -106,7 +106,7 @@ I picked simplicity and I have made sure that we only work on
 what is important and needed. I ensure that the team is
 creating just the basic functions first.
 
-<h3>Anjali Deshmukh</h3>
+<h2>Anjali Deshmukh</h2>
 
 ### Finished Last Week 
 - Task 1: Researched ideas for project

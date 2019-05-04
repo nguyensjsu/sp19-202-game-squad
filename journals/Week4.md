@@ -1,6 +1,6 @@
 <h1>Week 4 Scrum Report</h1>
 
-## Marianne Paulson
+<h2>Marianne Paulson</h2>
 
 ### Finished Last Week 
 - Task 1: Completed another draft of ad video
@@ -30,7 +30,7 @@ and uml diagrams constantly needs to be updated because of bug fixes, refactorin
 and changed features. We are adapting as a team to get the best value out of 
 each sprint.
 
-<h3>Chirag Arora</h3>
+<h2>Chirag Arora</h2>
 
 ### Finished Last Week 
 - Researched on WOW factor. Found Multiplayer is achievable but will require major design changes which is not feasible at this time.
@@ -53,7 +53,7 @@ each sprint.
 
 Everyone were respectful. Team did a great job in the 4 week sprint.
 
-<h3>Saumil N Patel</h3>
+<h2>Saumil N Patel</h2>
 
 ### Accomplished Last Week
 
@@ -77,7 +77,7 @@ Task 4: 2 hours
 
 This is the last week of sprint. I am happy that everyone considered my feedback and made changes accordingly. I provided my feedback for ad video and presentation to make it more presentable and polish.
 
-<h3>Megha</h3>
+<h2>Megha</h2>
 
 ### Finished Last Week
 
@@ -111,7 +111,7 @@ This is the last week of sprint. I am happy that everyone considered my feedback
 
 Researched on both Multiplayer game and Android game on Greenfoot. Porting to Android was the simpler choice so went ahead with it. Because of this choice we were able to get a WoW factor element.
 
-<h3>Anjali Deshmukh</h3>
+<h2>Anjali Deshmukh</h2>
 
 ### Finished Last Week 
 - Task 1: Implemented shield power system when snake hits shield
