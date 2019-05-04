@@ -21,6 +21,8 @@ Table of contents
 
 ## UI Wireframes
 
+https://balsamiq.cloud/s41ht0j/pcfr87k
+
 ![Alt text](/docs/Wireframes/1_Game%20Options.png?raw=true "Story #1")
 
 ![Alt text](/docs/Wireframes/2_Startup.png?raw=true "Story #2")
