@@ -12,6 +12,8 @@
 
 - Task 4: Helped team with github issues
 
+- Task 5: Worked on implementation of turtle shooting gunshots in Greenfoot
+
 ### Planned Next Week
 
 - Finish the design pattern (Decorate Shield)
