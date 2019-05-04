@@ -77,3 +77,5 @@ All team members contributed equally to create mocks, original features for the 
 <h2>Wow Factor</h2>
 
 https://github.com/nguyensjsu/sp19-202-game-squad/tree/wowtry
+
+References: https://github.com/rhildred/droidfoot
