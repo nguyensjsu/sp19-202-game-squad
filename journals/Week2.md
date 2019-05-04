@@ -43,6 +43,7 @@ know we have a time conflict, we should be upfront about it and try and estimate
 correctly.
 
 <h2>Chirag Arora</h2>
+
 ### Finished Last Week 
 - Wrapped up the factory pattern to create actors using multi-thread in the backgroun and using timer to control the creation of the actors
 - Started looking into Turtle kill feature story and how to update the counter score board.

@@ -22,7 +22,34 @@
 - Task1: 1 hrs
 - Task2: 3 hrs - decided during chatting and meeting
 - Task 3: 2 hours
+<h2></h2>
+<h2>Chirag Arora</h2>
 
+### Finished Last Week 
+- Looked at several games online since our team decided for game option 
+- Researched typical patterns used in games
+- Participated in wireframes and design of the game.
+
+### Planned Next Week 
+- Implementing initial framework for the world.
+- Technical story for a design pattern. Factory Pattern. Create lady bug and different types of lettuce (green and red).
+- Will be working on initial grounding work of observer pattern for Turtle kill. 
+
+### Problems
+
+- Problems hooking up with team.
+
+### Time Spend
+
+- Task1: 5 hrs
+- Task2: 5 hrs 
+
+### XP Core Value
+
+I was given respect. I made sure this week that every teammember should be 
+respectful to eachother by reminding them about this important aspect.
+It is one of the core values in XP.
+<h2></h2>
 <h2>Saumil N Patel</h2>
 
 ### Finished Last Week 
@@ -50,34 +77,7 @@ Difficulty (Low, Medium, High)
 As a team member responsible for feedback I have made sure that I give timely and 
 correct feedback to my teammates about their ideas and implementation approaches.
 I also encourage my teammates to give feedback regularly amongst us.
-
-<h2>Chirag Arora</h2>
-
-### Finished Last Week 
-- Looked at several games online since our team decided for game option 
-- Researched typical patterns used in games
-- Participated in wireframes and design of the game.
-
-### Planned Next Week 
-- Implementing initial framework for the world.
-- Technical story for a design pattern. Factory Pattern. Create lady bug and different types of lettuce (green and red).
-- Will be working on initial grounding work of observer pattern for Turtle kill. 
-
-### Problems
-
-- Problems hooking up with team.
-
-### Time Spend
-
-- Task1: 5 hrs
-- Task2: 5 hrs 
-
-### XP Core Value
-
-I was given respect. I made sure this week that every teammember should be 
-respectful to eachother by reminding them about this important aspect.
-It is one of the core values in XP.
-
+<h2></h2>
 <h2>Megha</h2>
 
 ### Finished Last Week
@@ -105,7 +105,7 @@ It is one of the core values in XP.
 I picked simplicity and I have made sure that we only work on
 what is important and needed. I ensure that the team is
 creating just the basic functions first.
-
+<h2></h2>
 <h2>Anjali Deshmukh</h2>
 
 ### Finished Last Week 
