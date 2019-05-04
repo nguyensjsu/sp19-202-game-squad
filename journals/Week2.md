@@ -41,7 +41,7 @@ about improving on their estimates. When we say we will complete something by a
 certain date, we need to try our hardest to meet our estimate. Therefore, if we 
 know we have a time conflict, we should be upfront about it and try and estimate
 correctly.
-
+<h2></h2>
 <h2>Chirag Arora</h2>
 
 ### Finished Last Week 
@@ -67,7 +67,7 @@ correctly.
 ### XP Core Value
 
 All the team members were respecting each other ideas. Though respect should also be regarded in terms of time. Most of the teammembers were on time for our meetings. Reminded them to be on time.
-
+<h2></h2>
 <h2>Saumil N Patel</h2>
 
 ### Accomplished Last Week
@@ -102,7 +102,7 @@ Task 5: 2 hours
 ### XP Value : Feedback
 
 During this week, I gave feedback to the team based on wireframes and use case specifications. I also suggested them some modifications to make user stories much more efficient.
-
+<h2></h2>
 <h2>Megha</h2>
 
 ### Finished Last Week
@@ -137,7 +137,7 @@ During this week, I gave feedback to the team based on wireframes and use case s
 ### Ensuring my XP core value of Simplicity
 
 Since we have started development this week, a lot of features are dependent on each other and most of them are in development state. I made sure that we were stubbing dependent code and there were no blockers so that we can proceed with our development. Using this simple technique we were able to progress smoothly.
-
+<h2></h2>
 <h2>Anjali Deshmukh</h2>
 
 ### Finished Last Week 

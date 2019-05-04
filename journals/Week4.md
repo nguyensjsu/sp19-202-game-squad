@@ -29,7 +29,7 @@ daily Standbots, that we also have to do weekly journals. Finally, our wireframe
 and uml diagrams constantly needs to be updated because of bug fixes, refactoring,
 and changed features. We are adapting as a team to get the best value out of 
 each sprint.
-
+<h2></h2>
 <h2>Chirag Arora</h2>
 
 ### Finished Last Week 
@@ -52,7 +52,7 @@ each sprint.
 ### XP Core Value
 
 Everyone were respectful. Team did a great job in the 4 week sprint.
-
+<h2></h2>
 <h2>Saumil N Patel</h2>
 
 ### Accomplished Last Week
@@ -76,7 +76,7 @@ Task 4: 2 hours
 ### XP Value : Feedback
 
 This is the last week of sprint. I am happy that everyone considered my feedback and made changes accordingly. I provided my feedback for ad video and presentation to make it more presentable and polish.
-
+<h2></h2>
 <h2>Megha</h2>
 
 ### Finished Last Week
@@ -110,7 +110,7 @@ This is the last week of sprint. I am happy that everyone considered my feedback
 ### Ensuring my XP core value of Simplicity
 
 Researched on both Multiplayer game and Android game on Greenfoot. Porting to Android was the simpler choice so went ahead with it. Because of this choice we were able to get a WoW factor element.
-
+<h2></h2>
 <h2>Anjali Deshmukh</h2>
 
 ### Finished Last Week 

@@ -35,7 +35,7 @@ I reminded our team that noone works alone. Therefore, if we have issues, we nee
 up about them. Our team has been very good about that. As a result, we have had 
 multiple meetings on zoom in addition to our standbots and weekly Saturday face-2-face
 meetings.
-
+<h2></h2>
 <h2>Chirag Arora</h2>
 
 ### Finished Last Week 
@@ -59,7 +59,7 @@ meetings.
 ### XP Core Value
 
 So far all criteria for respect XP values were met. All team members reported no issues in terms of respect. Standups were conducted with respecting each other ideas, thoughts and suggestions.
-
+<h2></h2>
 <h2>Saumil N Patel</h2>
 
 ### Accomplished Last Week
@@ -86,7 +86,7 @@ So far all criteria for respect XP values were met. All team members reported no
 ### XP Value : Feedback
 
 In this week, I did peer review for many pull requests and I tested different features and reported my feedback to the team.
-
+<h2></h2>
 <h2>Megha</h2>
 
 ### Finished Last Week
@@ -122,7 +122,7 @@ In this week, I did peer review for many pull requests and I tested different fe
 ### Ensuring my XP core value of Simplicity
 
 Most of our features required actors to have different images at different points based on the state of the game. We spent some time thinking about editing existing images to make them look a certain way. But eventually I encouraged the team to pick the simplest images for the actors and not spend too much time editing the same thereby not focusing too much on the look of actors.
-
+<h2></h2>
 <h2>Anjali Deshmukh</h2>
 
 ### Finished Last Week 
