@@ -73,7 +73,7 @@ Actor: ```DifficultyLow```, ```DifficultyMedium```, ```DifficultyHigh```
 
 ![Alt text](/docs/Story1-GameStartUpScreen.png?raw=true "Strategy Pattern")
 
-<img src="/docs/Story1_use_case_specification.png"  width="500" height="500">
+<img src="/docs/Story1-use_case_specification.png"  width="500" height="500">
 
 #### Factory
 
@@ -132,7 +132,7 @@ When turtle is moving, turtle can eat many things and user gains points on the b
 Interface: ```IScoreObserver```
 Class: ```ScoreManager```, ```Level```
 
-![Alt text](/docs/Stor10-WonTheGame.png?raw=true "Won the game")
+![Alt text](/docs/Story10-WonTheGame.png?raw=true "Won the game")
 
 <img src="/docs/Story10_use_case_specification.png"  width="500" height="500">
 
